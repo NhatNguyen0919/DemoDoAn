@@ -1,0 +1,103 @@
+{
+    "homeheader": {
+        "speciality": "Chuyên Khoa",
+        "searchdoctor": "Tìm bác sĩ theo chuyên Khoa",
+        "health-facility": "Cơ sở y tế",
+        "select-room": "Chọn bệnh viện phòng khám",
+        "doctors": "Bác sĩ",
+        "select-doctors": "Chọn bác sĩ giỏi",
+        "fee": "Gói Khám",
+        "check-health": "Khám sức khỏe tổng quát",
+        "support": "Hỗ trợ",
+        "language": "Ngôn ngữ",
+        "welcome": "Xin chào",
+        "contact": "Liên hệ",
+        "home": "Trang chủ",
+        "search": "Tìm gói khám tổng quát"
+    },
+    "banner": {
+        "title1": "NỀN TẢNG Y TẾ",
+        "title2": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+        "child1": "Khám Chuyên khoa",
+        "child2": "Khám từ xa",
+        "child3": "Khám tổng quát",
+        "child4": "Xét nghiệm y học",
+        "child5": "Sức khỏe tinh thần",
+        "child6": "Khám nha khoa",
+        "why": "Lý do vì sao nên chọn CareMed",
+        "reason": "Việc lựa chọn một bệnh viện tốt là quan trọng vì nó ảnh hưởng trực tiếp đến chất lượng chăm sóc sức khỏe mà bạn nhận được. Dưới đây là một số lý do quan trọng vì sao bạn nên chọn CareMed",
+        "quality": "Chất Lượng Dịch Vụ Y Tế",
+        "quality-doctor": "Đội Ngũ Y Bác Sĩ và Nhân Viên Chăm Sóc",
+        "quality-rs": "CareMed  cung cấp chất lượng dịch vụ y tế cao, bao gồm cả các dịch vụ chẩn đoán, điều trị và phục hồi.",
+        "quality-doctor-rs": " Caremed có đội ngũ y bác sĩ và nhân viên chăm sóc y tế chất lượng, được đào tạo chuyên sâu và có kinh nghiệm.",
+        "feedback-doctor": "Đánh Giá và Phản Hồi Từ Bệnh Nhân",
+        "feedback-rs": " Phản hồi từ bệnh nhân cung cấp cái nhìn trực tiếp về chất lượng dịch vụ y tế mà bệnh viện cung cấp. ",
+        "support-cus": "Dịch Vụ Hỗ Trợ và Tư Vấn",
+        "support-rs": "Caremed cung cấp dịch vụ hỗ trợ và tư vấn cho bệnh nhân, giúp họ và gia đình có thông tin và hỗ trợ cần thiết."
+    },
+    "menu": {
+        "admin": {
+            "user-manage": "Quản lý người sử dụng",
+            "doctor-manage": "Quản lý bác sĩ",
+            "admin-manage": "Quản lý admin",
+            "crud": "CRUD user",
+            "crud-redux": "CRUD Redux",
+            "clinic": "Phòng khám",
+            "clinic-manage": "Quản lý phòng khám",
+            "specialty": "Chuyên Khoa",
+            "specialty-manage": "Quản lý chuyên khoa",
+            "handbook": "Cẩm nang",
+            "handbook-manage": "Quản lý cẩm nang"
+        },
+        "doctor": {
+            "manage-schedule": "Quản lý kế hoạch khám bệnh"
+        }
+    },
+    "manage-users": {
+        "add": "Thêm mới người dùng",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "first-name": "Tên",
+        "last-name": "Họ",
+        "phone-number": "Số điện thoại",
+        "address": "Địa chỉ nhà",
+        "gender": "Giới tính",
+        "position": "Chức danh",
+        "role": "Vai trò",
+        "save": "Lưu người dùng",
+        "image": "Hình ảnh",
+        "edit": "Lưu thay đổi"
+    },
+    "homepage": {
+        "out-standing-doctors": "Bác sĩ nổi bật tuần qua",
+        "more-info": "Xem thêm"
+    },
+    "manage-schedule": {
+        "title": "Quản lý kế hoạch khám bệnh bác sĩ",
+        "choose-doctor": "Chọn bác sĩ",
+        "choose-day": "Chọn ngày",
+        "save-in4": "Lưu thông tin"
+    },
+    "patients": {
+        "detail-doctor": {
+            "schedule": "Lịch khám",
+            "no-schedule": "Không có lịch hẹn .Vui lòng quay lại sau",
+            "choose-book": "Chọn và đặt miễn phí "
+        }
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Thêm thông tin bác sĩ",
+            "select-doctor": "Chọn bác sĩ",
+            "intro-infor": "Thông tin giới thiệu",
+            "add": "Tạo thông tin",
+            "save": "Lưu thông tin",
+            "price": "Giá khám ",
+            "payment": "Phương thức thanh toán",
+            "province": "Tỉnh thành",
+            "nameClinic": "Tên phòng khám",
+            "addressClinic": "Địa chỉ phòng khám",
+            "note": "Ghi chú"
+        }
+    }
+}

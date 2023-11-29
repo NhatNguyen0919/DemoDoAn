@@ -1,0 +1,129 @@
+{
+    "homeheader": {
+        "speciality": "Medical specialty",
+        "searchdoctor": "Find doctors by specialty",
+        "health-facility": "Health facilities",
+        "select-room": "Choose hospital clinic",
+        "doctors": "Doctors ",
+        "select-doctors": "Choose a good doctor",
+        "fee": "Checkup package",
+        "check-health": "General health check",
+        "support": "Support",
+        "language": "Languages",
+        "welcome": "Welcome",
+        "contact": "Contact",
+        "home": "Home",
+        "search": "Find a general check-up package"
+    },
+    "banner": {
+        "title1": "MEDICAL PLATFORM",
+        "title2": "COMPRHENSIVE HEALTH CARE",
+        "child1": "Specialize examination",
+        "child2": "Remote examination",
+        "child3": "General examination",
+        "child4": "Medical test",
+        "child5": "Mental health",
+        "child6": "Dental examination",
+        "why": "Why Choose CareMed",
+        "reason": "The choice of a good hospital is crucial as it directly influences the quality of healthcare you receive. Here are some important reasons why you should choose CareMed.",
+        "quality": "Quality of Healthcare Services",
+        "quality-doctor": "Team of Doctors and Care Staff",
+        "quality-rs": "CareMed provides high-quality healthcare services, including diagnostic, treatment, and rehabilitation services",
+        "quality-doctor-rs": "In CareMed, we have a team of quality healthcare professionals, including highly trained and experienced doctors and care staff.",
+        "feedback-doctor": "Patient Reviews and Feedback",
+        "feedback-rs": "Patient feedback provides a direct insight into the quality of healthcare services that the hospital offers.",
+        "support-cus": "Support Services and Counseling",
+        "support-rs": "Caremed provides support services and counseling for patients, offering them and their families the necessary information and assistance."
+    },
+    "common": {
+        "add": "Add",
+        "edit": "Edit",
+        "delete": "Delete",
+        "decentralize": "Decentralize",
+        "close": "Close",
+        "save": "Save",
+        "refresh": "Refresh",
+        "accept": "Accept",
+        "confirm": "Confirm",
+        "confirm-this-task": "Are you sure to process this task?",
+        "fail-to-load-data": "Fail to load data",
+        "unknown-error": "There was an error",
+        "internal-server-error": "Internal server error",
+        "bad-request": "Bad request",
+        "forbiden-request": "Invalid input data",
+        "fail-to-load-all-code": "Fail to load data from allcode",
+        "sum": "Sum",
+        "date-range-invalid": "Date range invalid"
+    },
+    "login": {
+        "login": "Login",
+        "username": "Username",
+        "password": "Password",
+        "userpass-wrong": "Invalid username or password!"
+    },
+    "menu": {
+        "admin": {
+            "user-manage": "User manage system",
+            "doctor-manage": "Doctors manage",
+            "admin-manage": "Admin manage",
+            "crud": "CRUD user",
+            "crud-redux": "CRUD Redux",
+            "clinic": "Clinics",
+            "clinic-manage": "Clinics manage",
+            "specialty": "Specialty",
+            "specialty-manage": "Manage specialty",
+            "handbook": "Handbook",
+            "handbook-manage": "Manage handbook"
+        },
+        "doctor": {
+            "manage-schedule": "Manage doctor schedule"
+        }
+    },
+    "manage-users": {
+        "add": "Add a new user",
+        "email": "Email",
+        "password": "Password",
+        "first-name": "First name",
+        "last-name": "Last name",
+        "phone-number": "Phone number",
+        "address": "Address",
+        "gender": "Gender",
+        "position": "Position",
+        "role": "Role Id",
+        "save": "Save users",
+        "image": "Image",
+        "edit": "Save edit users"
+    },
+    "homepage": {
+        "out-standing-doctors": "Outstanding Doctors",
+        "more-info": "More infor"
+    },
+    "manage-schedule": {
+        "title": "Physician Appointment Management",
+        "choose-doctor": "Select a Doctor",
+        "choose-day": "Select Day",
+        "save-in4": "Save"
+    },
+    "patients": {
+        "detail-doctor": {
+            "schedule": "Schedule",
+            "no-schedule": "No appointments available. Please come back later.",
+            "choose-book": "Choose and book for free"
+        }
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Add Doctor Information",
+            "select-doctor": "Select Doctors",
+            "intro-infor": "Introduction Information",
+            "add": "Add",
+            "save": "Save",
+            "price": "Medical Examination Fee",
+            "payment": "Payment Methods",
+            "province": "Province",
+            "nameClinic": "Medical Clinic Name",
+            "addressClinic": "Clinic Address",
+            "note": "Note"
+        }
+    }
+}
