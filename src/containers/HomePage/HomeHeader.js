@@ -10,6 +10,9 @@ import logo from "../../assets/logo2.png"
 import { LANGUAGES } from '../../utils/constant';
 import { changeLanguageApp } from '../../store/actions/appActions';
 import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
+import AllDoctor from './Section/AllDoctor';
+
 
 class HomeHeader extends Component {
 
@@ -61,8 +64,9 @@ class HomeHeader extends Component {
 
     returnHome = () => {
         this.props.history.push('/home');
-
     }
+
+
 
 
     render() {
@@ -72,6 +76,7 @@ class HomeHeader extends Component {
 
         return (
             <>
+
 
                 <div className="home-header-container" >
                     <div className="home-header-content">
@@ -92,7 +97,7 @@ class HomeHeader extends Component {
                                     <div ><FormattedMessage id="menu.admin.clinic" /></div>
                                 </li>
                                 <li>
-                                    <div ><FormattedMessage id="homeheader.doctors" /></div>
+                                    <Link to="/AllDoctor" ><b><FormattedMessage id="homeheader.doctors" /></b></Link>
                                 </li>
                                 <li>
                                     <div ><FormattedMessage id="homeheader.contact" /></div>
@@ -112,11 +117,11 @@ class HomeHeader extends Component {
                                 <div className='sub-title'><FormattedMessage id="homeheader.select-room" /></div>
                             </div>
                             <div className="child-content">
-                                <div><b><FormattedMessage id="homeheader.doctors" /></b></div>
-                                <div className='sub-title'><FormattedMessage id="homeheader.select-doctors" /></div>
+                                <Link to="/AllDoctor" ><b><FormattedMessage id="homeheader.doctors" /></b></Link>
+                                <Link to="/AllDoctor" className='sub-title'><FormattedMessage id="homeheader.select-doctors" /></Link>
                             </div>
                             <div className="child-content">
-                                <div><b><FormattedMessage id="homeheader.fee" /></b></div>
+                                <div><b ><FormattedMessage id="homeheader.fee" /></b></div>
                                 <div className='sub-title'><FormattedMessage id="homeheader.check-health" /></div>
                             </div>
                         </div>

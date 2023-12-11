@@ -60,7 +60,7 @@ class TableManageUser extends Component {
         let arrUsers = this.state.usersRedux;
         return (
             <>
-                <table id='TableManageUser'>
+                {/* <table id='TableManageUser'>
                     <tbody>
                         <tr>
                             <th>Mail</th>
@@ -107,10 +107,7 @@ class TableManageUser extends Component {
 
 
                     </tbody>
-
-
-                </table>
-                <MdEditor style={{ height: '500px' }} renderHTML={text => mdParser.render(text)} onChange={handleEditorChange} />
+                </table> */}
 
             </>
 

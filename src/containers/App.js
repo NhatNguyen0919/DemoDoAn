@@ -16,6 +16,7 @@ import { CustomToastCloseButton } from '../components/CustomToast';
 import HomePage from '../containers/HomePage/HomePage'
 import Register from './Auth/Register';
 import Doctor from '../routes/Doctor';
+import AllDoctor from './HomePage/Section/AllDoctor';
 class App extends Component {
     handlePersistorState = () => {
         const { persistor } = this.props;
@@ -43,6 +44,7 @@ class App extends Component {
 
                         <div className="content-container">
                             <CustomScrollbars style={{ height: '100vh', width: '100%' }}>
+                                {/* Admin Route */}
                                 <Switch>
                                     <Route path={path.HOME} exact component={(Home)} />
                                     <Route path={path.HOMEPAGE} component={HomePage} />
@@ -51,6 +53,11 @@ class App extends Component {
                                     <Route path={path.DETAIL_DOCTOR} component={detailDoctor} />
                                     <Route path={'/doctor/'} component={userIsAuthenticated(Doctor)} />
                                     <Route path={path.REGISTER} component={Register} />
+                                </Switch>
+
+                                {/* Homepage route */}
+                                <Switch>
+                                    <Route path="/Alldoctor" component={(AllDoctor)} />
                                 </Switch>
                             </CustomScrollbars>
                         </div>

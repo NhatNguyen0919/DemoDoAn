@@ -19,7 +19,7 @@ class HandBook extends Component {
         return (
             <>
                 <div>
-                    <div className='section-wrapper section-handbook'>
+                    <div className='section-wrapper section-handbook1'>
                         <div className='section-container'>
                             <div className="section-header">
                                 <h3>Cẩm nang</h3>

@@ -34,11 +34,6 @@ class Login extends Component {
     }
 
 
-    returnRegister = () => {
-        this.props.history.push('/register');
-
-    }
-
 
     handleOnSubmit = async () => {
         this.setState({
@@ -71,7 +66,7 @@ class Login extends Component {
 
 
     returnRegister = () => {
-        this.props.history.push('/register');
+        this.props.history.push('/login');
 
     }
 

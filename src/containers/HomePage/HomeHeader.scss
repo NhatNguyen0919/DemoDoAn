@@ -70,6 +70,11 @@
                     font-weight: 600;
                     list-style: none;
 
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }
+
                     div {
                         cursor: pointer;
 
@@ -99,16 +104,35 @@
             align-items: center;
 
             .child-content {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
 
-                b {
-                    color: #215159;
+                a {
+                    text-decoration: none;
+
+                    b {
+                        color: #215159;
+
+                        &:hover {
+                            color: #215159;
+                            opacity: 0.8;
+                        }
+                    }
                 }
+
+
 
                 .sub-title {
                     font-weight: 400;
                     font-size: 12px;
                     opacity: 0.8;
                     color: #215159;
+
+                    &:hover {
+                        color: #215159;
+                        opacity: 1;
+                    }
                 }
             }
         }

@@ -13,7 +13,7 @@ const DownLoad = () => {
                         </div>
                     </div>
                     <div className="right-content">
-                        <h2>Tải ứng dụng BookingCare</h2>
+                        <h2>Tải ứng dụng CareMed</h2>
                         <ul>
                             <li><i><MdDoneOutline /></i> Đặt khám nhanh hơn</li>
                             <li><i><MdDoneOutline /></i> Nhận thông báo từ hệ thống</li>

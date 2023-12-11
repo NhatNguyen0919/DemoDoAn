@@ -8,6 +8,8 @@ import { LANGUAGES, USER_ROLES } from "../../utils";
 import { adminMenu, doctorMenu } from './menuApp';
 import { FormattedMessage } from 'react-intl';
 import _ from 'lodash';
+import logo from "../../assets/logo2.png"
+
 
 
 class Header extends Component {
@@ -46,9 +48,12 @@ class Header extends Component {
             <>
                 <div className="header-container">
                     {/* thanh navigator */}
+                    <img className="logo-header" src={logo} alt="" />
+
                     <div className="header-tabs-container">
                         <Navigator menus={this.state.menuApp} />
                     </div>
+
 
                     <div className='menu-language'>
                         <span className='welcome'><FormattedMessage id="homeheader.welcome" /> {userInfo && userInfo.firstName ? userInfo.firstName + " " + userInfo.lastName : ""}</span>

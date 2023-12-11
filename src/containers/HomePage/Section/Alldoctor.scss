@@ -1,0 +1,119 @@
+.all-doctor-body {
+    height: 800px;
+
+
+    .all-doctor-title {
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+
+        h2 {
+            font-weight: bold;
+            font-size: 60px;
+            line-height: 1.8;
+            color: #215159;
+        }
+    }
+
+    .all-doctor-container {
+        .single-doctor {
+            width: 700px;
+            border: 1px solid #e3e4e4;
+            display: flex;
+            border-radius: 5px;
+            margin-bottom: 50px;
+
+
+
+            .left {
+                width: 40%;
+                overflow: hidden;
+
+
+                img {
+                    border-radius: 5px;
+
+                    height: 100%;
+                    width: 100%;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    object-position: center;
+                    object-fit: cover;
+                    cursor: pointer;
+                    outline: none;
+                    transition: 0.1s linear;
+
+
+                    &:hover {
+                        -webkit-transform: scale(1.05);
+                        transform: scale(1.05);
+
+                    }
+
+                }
+            }
+
+            .right {
+                padding: 30px;
+                width: 60%;
+
+                h4 {
+                    font-weight: 600;
+                    color: #005963;
+                    font-size: 20px;
+                    line-height: 1.3;
+                }
+
+                div {
+                    color: #005963;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+
+                p {
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    color: #686a6f;
+                    font-size: 14px;
+                    line-height: 1.8;
+                }
+
+                button {
+                    cursor: pointer;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    position: relative;
+                    background-color: #00acb1;
+                    border: 0;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding: 17px 30px;
+                    transition: .3s;
+                    text-transform: uppercase;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    z-index: 1;
+                    box-shadow: 0 3px 24px rgba(0, 0, 0, .1);
+                    margin-left: 20px;
+
+                    &:hover {
+                        background-color: #005963;
+
+                    }
+
+                }
+                .active {
+                    background-color: #005963;
+                }
+            }
+        }
+    }
+
+    .page{
+        
+    }
+
+}

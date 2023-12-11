@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-
 import './Navigator.scss';
 
 class MenuGroup extends Component {
@@ -10,14 +9,19 @@ class MenuGroup extends Component {
     render() {
         const { name, children } = this.props;
         return (
-            <li className="menu-group">
-                <div className="menu-group-name">
-                    <FormattedMessage id={name} />
-                </div>
-                <ul className="menu-list list-unstyled">
-                    {children}
-                </ul>
-            </li>
+            <>
+                
+                <li className="menu-group">
+                    <div className="menu-group-name">
+
+
+                        <FormattedMessage id={name} />
+                    </div>
+                    <ul className="menu-list list-unstyled">
+                        {children}
+                    </ul>
+                </li>
+            </>
         );
     }
 }
@@ -48,10 +52,10 @@ class Menu extends Component {
                         </div>
                     </Fragment>
                 ) : (
-                        <Link to={link} className="menu-link" onClick={onLinkClick}>
-                            <FormattedMessage id={name} />
-                        </Link>
-                    )}
+                    <Link to={link} className="menu-link" onClick={onLinkClick}>
+                        <FormattedMessage id={name} />
+                    </Link>
+                )}
             </li>
         );
     }
