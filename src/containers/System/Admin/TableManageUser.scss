@@ -1,27 +1,84 @@
-#TableManageUser {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+.closeBtn {
+    float: right;
+
+    i {
+        font-size: 40px;
+        transition: 0.2s linear;
+        cursor: pointer;
+
+        &:hover {
+            color: #7b828d;
+
+        }
+    }
 }
 
-#TableManageUser td,
-#TableManageUser th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
 
-#TableManageUser tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
+.table-manage-container {
+    max-width: 1920px;
+    background-color: #f5f4f9;
 
-#TableManageUser tr:hover {
-    background-color: #ddd;
-}
 
-#TableManageUser th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #0071ba;
-    color: white;
+    .table-body {
+        width: 100%;
+        padding: 50px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .user-redux-title {
+            text-align: center;
+            color: #7b828d;
+            font-weight: bold;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
+        table {
+            width: 80% !important;
+            display: block;
+
+
+            .thead-id {
+                min-width: 40px !important;
+            }
+
+            .thead {
+                min-width: 200px !important;
+            }
+
+            .thead-mail {
+                min-width: 350px !important;
+            }
+
+            tbody {
+                .td-img {
+                    border-radius: 50%;
+                    height: 40%;
+                    width: 20%;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    object-position: center;
+                    object-fit: cover;
+                    cursor: pointer;
+                    outline: none;
+                    margin-right: 15px;
+
+                }
+            }
+        }
+
+
+
+
+    }
+
+    #TableManageUser {
+        width: 100%;
+    }
+
+
 }

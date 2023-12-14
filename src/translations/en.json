@@ -64,9 +64,9 @@
     "menu": {
         "admin": {
             "user-manage": "User manage system",
-            "doctor-manage": "Doctors manage",
+            "doctor-manage": "Add information",
             "admin-manage": "Admin manage",
-            "crud": "CRUD user",
+            "crud": "Homepage",
             "crud-redux": "Register Information",
             "clinic": "Clinics",
             "clinic-manage": "Clinics manage",
@@ -119,15 +119,15 @@
         },
         "booking-modal": {
             "title": "Appointment Booking Information",
-            "name":"Full Name",
-            "phone-number":"Phone number",
-            "birthday":"Date of Birth",
-            "reasons":"Reason for Consultation",
-            "address":"Address",
-            "gender":"Gender",
-            "confirm":"Confirm",
-            "cancel":"Cancel",
-            "price":"Examination Fee"
+            "name": "Full Name",
+            "phone-number": "Phone number",
+            "birthday": "Date of Birth",
+            "reasons": "Reason for Consultation",
+            "address": "Address",
+            "gender": "Gender",
+            "confirm": "Confirm",
+            "cancel": "Cancel",
+            "price": "Examination Fee"
         }
     },
     "admin": {

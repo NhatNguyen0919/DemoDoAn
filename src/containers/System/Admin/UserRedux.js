@@ -9,6 +9,7 @@ import * as actions from '../../../store/actions';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import TableManageUser from './TableManageUser';
+import ManageDoctor from './ManageDoctor';
 
 
 
@@ -35,6 +36,7 @@ class UserRedux extends Component {
 
             action: '',
             userEditId: '',
+            isOpenModal: false
         }
     }
 
@@ -130,6 +132,8 @@ class UserRedux extends Component {
             isOpen: true,
         })
     }
+
+
 
     handleSaveUser = () => {
         let isValid = this.checkValidateInput();
@@ -230,6 +234,12 @@ class UserRedux extends Component {
         })
     }
 
+    handleOpenModal = () => {
+        this.setState({
+            isOpenModal: !this.state.isOpenModal
+        })
+    }
+
 
     render() {
 
@@ -247,49 +257,58 @@ class UserRedux extends Component {
         return (
             <>
                 <div className='user-redux-container'>
-                    <div className='title'>User Redux</div>
                     <div className="user-redux-body " >
+                        <div className='user-redux-title'>Register Information</div>
                         <div className='container'>
+                            <div className="col-12 my-3 add-user"><FormattedMessage id="manage-users.add" /></div>
                             <div className="row">
-                                <div className="col-12 my-3"><FormattedMessage id="manage-users.add" /></div>
+                                <div className="col-12 my-5">
+                                    <button className={"btn btn-secondary"}
+                                        onClick={() => { this.handleOpenModal() }}
+                                    >
+                                        Xem thông tin
+                                    </button>
+
+                                </div>
                                 <div className="col-12 my-3">{isLoadingGender === true ? 'Loading Genders' : ''}</div>
-                                <div className="col-3 my-3">
+                                <div className="col-4 my-3">
                                     <label htmlFor=""><FormattedMessage id="manage-users.email" /></label>
                                     <input className='form-control'
                                         type="email" value={email} onChange={(e) => { this.onChangeInput(e, 'email') }}
                                         disabled={this.state.action === CRUD_ACTION.EDIT ? true : false}
                                     />
                                 </div>
-                                <div className="col-3 my-3">
+                                <div className="col-4 my-3">
                                     <label htmlFor=""><FormattedMessage id="manage-users.password" /></label>
                                     <input className='form-control'
                                         type="password" value={password} onChange={(e) => { this.onChangeInput(e, 'password') }}
                                         disabled={this.state.action === CRUD_ACTION.EDIT ? true : false}
                                     />
                                 </div>
-                                <div className="col-3 my-3">
-                                    <label htmlFor=""><FormattedMessage id="manage-users.first-name" /></label>
-                                    <input className='form-control'
-                                        type="text" value={firstName} onChange={(e) => { this.onChangeInput(e, 'firstName') }} />
-                                </div>
-                                <div className="col-3 my-3">
-                                    <label htmlFor=""><FormattedMessage id="manage-users.last-name" /></label>
-                                    <input className='form-control'
-                                        type="text" value={lastName} onChange={(e) => { this.onChangeInput(e, 'lastName') }} />
-                                </div>
-                                <div className="col-3 my-3">
+                                <div className="col-4 my-3">
                                     <label htmlFor=""><FormattedMessage id="manage-users.phone-number" /></label>
                                     <input className='form-control' type="text"
                                         value={phoneNumber} onChange={(e) => { this.onChangeInput(e, 'phoneNumber') }}
                                     />
                                 </div>
-                                <div className="col-9 my-3">
+                                <div className="col-4 my-3">
+                                    <label htmlFor=""><FormattedMessage id="manage-users.first-name" /></label>
+                                    <input className='form-control'
+                                        type="text" value={firstName} onChange={(e) => { this.onChangeInput(e, 'firstName') }} />
+                                </div>
+                                <div className="col-4 my-3">
+                                    <label htmlFor=""><FormattedMessage id="manage-users.last-name" /></label>
+                                    <input className='form-control'
+                                        type="text" value={lastName} onChange={(e) => { this.onChangeInput(e, 'lastName') }} />
+                                </div>
+
+                                <div className="col-4 my-3">
                                     <label htmlFor=""><FormattedMessage id="manage-users.address" /></label>
                                     <input className='form-control' type="text"
                                         value={address} onChange={(e) => { this.onChangeInput(e, 'address') }}
                                     />
                                 </div>
-                                <div className="col-3 my-3">
+                                <div className="col-4 my-3">
                                     <label htmlFor=""><FormattedMessage id="manage-users.gender" /></label>
                                     <select className="form-select"
                                         value={gender} onChange={(e) => { this.onChangeInput(e, 'gender') }}
@@ -303,7 +322,7 @@ class UserRedux extends Component {
                                         })}
                                     </select>
                                 </div>
-                                <div className="col-3 my-3">
+                                <div className="col-4 my-3">
                                     <label htmlFor=""><FormattedMessage id="manage-users.position" /></label>
                                     <select className="form-select"
                                         value={position} onChange={(e) => { this.onChangeInput(e, 'position') }}
@@ -318,7 +337,7 @@ class UserRedux extends Component {
                                         })}
                                     </select>
                                 </div>
-                                <div className="col-3 my-3">
+                                <div className="col-4 my-3">
                                     <label htmlFor=""><FormattedMessage id="manage-users.role" /></label>
                                     <select className="form-select"
                                         value={role} onChange={(e) => { this.onChangeInput(e, 'role') }}
@@ -356,13 +375,8 @@ class UserRedux extends Component {
                                     </button>
 
                                 </div>
-                                <div className="col-12 mb-5">
-                                    <TableManageUser
-                                        handleEditUserFromParent={this.handleEditUserFromParent}
-                                        action={this.state.action}
-                                    />
 
-                                </div>
+
 
                             </div>
                         </div>
@@ -374,7 +388,15 @@ class UserRedux extends Component {
 
                     />}
 
+
+
                 </div>
+
+                <TableManageUser
+                    handleEditUserFromParent={this.handleEditUserFromParent}
+                    isOpenModal={this.state.isOpenModal}
+                    handleOpenModal={this.handleOpenModal}
+                />
 
             </>
 

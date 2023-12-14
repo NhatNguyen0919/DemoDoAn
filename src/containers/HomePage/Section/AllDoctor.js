@@ -9,6 +9,7 @@ import * as actions from '../../../store/actions';
 import { getAllDetailInfoDoctors } from '../../../services/userService';
 import { FaHeart } from "react-icons/fa";
 import { toast } from 'react-toastify';
+import ReactPaginate from 'react-paginate';
 
 
 
@@ -19,7 +20,9 @@ class AllDoctor extends Component {
         this.state = {
             arrDoctors: [],
             doctorInfor: '',
-            isHeart: false
+            isHeart: false,
+            currentPage: '',
+            postsPerPage: ''
         }
     }
 
@@ -52,14 +55,20 @@ class AllDoctor extends Component {
         toast.info('❤ Thank you!')
     }
 
+    handlePageClick = (event) => {
+
+    }
+
 
     render() {
+
         let { arrDoctors, doctorInfor } = this.state;
         let { language } = this.props;
 
         return (
             <>
-                <div><HomeHeader /></div>
+
+                <HomeHeader />
                 <div className="all-doctor-body">
                     <div className="all-doctor-title">
                         <h2>Doctor List</h2>
@@ -70,6 +79,7 @@ class AllDoctor extends Component {
 
                             </div>
                             <div className="col-lg-8">
+
                                 {arrDoctors && arrDoctors.length > 0 && arrDoctors.map((item, index) => {
                                     let imageBase64 = '';
                                     if (item.image) {
@@ -121,8 +131,11 @@ class AllDoctor extends Component {
                                         </>
                                     )
                                 })}
+
                             </div>
+
                         </div>
+
                     </div>
                     <HomeFooter />
                 </div>

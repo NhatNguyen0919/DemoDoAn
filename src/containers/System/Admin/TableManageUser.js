@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { AiFillEdit, AiOutlineDelete, AiOutlinePlus } from "react-icons/ai";
 import './TableManageUser.scss';
 import * as actions from '../../../store/actions';
+import { IoCloseSharp } from "react-icons/io5";
 
 
 
@@ -11,6 +12,7 @@ import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
 // import style manually
 import 'react-markdown-editor-lite/lib/index.css';
+import { Modal, ModalBody } from 'reactstrap';
 
 // Register plugins if required
 // MdEditor.use(YOUR_PLUGINS_HERE);
@@ -58,56 +60,85 @@ class TableManageUser extends Component {
 
     render() {
         let arrUsers = this.state.usersRedux;
+        let { handleOpenModal } = this.props
+        console.log("check arrUsers :", arrUsers);
         return (
             <>
-                {/* <table id='TableManageUser'>
-                    <tbody>
-                        <tr>
-                            <th>Mail</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Address</th>
-                            <th>Gender</th>
-                            <th>Position</th>
-                            <th>Phone Number</th>
-                            <th>Action</th>
-                        </tr>
-                        {arrUsers && arrUsers.length > 0
-                            && arrUsers.map((item, index) => {
-                                return (
-                                    <tr key={index} >
-                                        <td>{item.email}</td>
-                                        <td>{item.firstName}</td>
-                                        <td>{item.lastName}</td>
-                                        <td>{item.address}</td>
-                                        <td>{item.gender}</td>
-                                        <td>{item.positionId}</td>
-                                        <td>{item.phoneNumber}</td>
-                                        <td className='action-crud'>
-                                            <button className='mx-2'
-                                                onClick={() => { this.handleEditUser(item) }}
-                                            >
-                                                Edit
-                                                <i>
-                                                    <AiFillEdit />
-                                                </i>
-                                            </button>
+                <Modal
+                    isOpen={this.props.isOpenModal}
+                    // toggle={() => this.toggle()}
+                    className={'className'}
+                    size='fullscreen'
+                    centered
+                >
 
-                                            <button className='mx-2' onClick={() => { this.handleDelete(item) }}>
-                                                Delete
-                                                <i>
-                                                    <AiOutlineDelete />
-                                                </i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                )
-                            })
-                        }
+                    <ModalBody>
+                        <div className='closeBtn'>
+                            <i onClick={handleOpenModal}><IoCloseSharp /></i>
+                        </div>
+                        <div className="table-manage-container">
+                            <div className="table-body">
+                                <div className='user-redux-title'>Manage User</div>
 
+                                <table className='table table-striped table-hover' id='TableManageUser'>
+                                    <thead>
+                                        <tr>
+                                            <th className="thead-id" >#</th>
+                                            <th className="thead-mail">MAIL</th>
+                                            <th className="thead">FIRST NAME</th>
+                                            <th className="thead">POSITION</th>
+                                            <th className="thead">PHONE NUMBER</th>
+                                            <th className="thead">ACTION</th>
 
-                    </tbody>
-                </table> */}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {arrUsers && arrUsers.length > 0
+                                            && arrUsers.map((item, index) => {
+                                                let imageBase64 = '';
+                                                if (item.image) {
+                                                    imageBase64 = new Buffer(item.image, 'base64').toString('binary');
+                                                }
+                                                return (
+
+                                                    <tr key={index} >
+                                                        <th>{index + 1}</th>
+                                                        <td className='td-email'><img className='td-img' src={imageBase64 ? imageBase64 : "https://cdn.sforum.vn/sforum/wp-content/uploads/2023/10/avatar-trang-4.jpg"} alt="" />{item.email}</td>
+                                                        <td>{item.firstName}</td>
+                                                        <td>{item.positionId}</td>
+                                                        <td>{item.phoneNumber}</td>
+
+                                                        <td className='action-crud'>
+                                                            <button className='mx-2'
+                                                                onClick={() => { this.handleEditUser(item) }}
+                                                                
+                                                            >
+                                                                Edit
+                                                                <i>
+                                                                    <AiFillEdit />
+                                                                </i>
+                                                            </button>
+
+                                                            <button className='mx-2' onClick={() => { this.handleDelete(item) }}>
+                                                                Delete
+                                                                <i>
+                                                                    <AiOutlineDelete />
+                                                                </i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                )
+                                            })
+                                        }
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </ModalBody>
+
+                </Modal>
+
 
             </>
 

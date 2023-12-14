@@ -54,9 +54,8 @@ class DetailDoctor extends Component {
         }
         return (
             <>
-                <div>
-                    <HomeHeader isShowBanner={false}></HomeHeader>
-                </div>
+
+                <HomeHeader isShowBanner={false}></HomeHeader>
                 <div className="doctor-detail-container">
                     <div className='intro-doctor'>
                         <div

@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { getAllUsers, createNewUserService, deleteUSerService, editUserService } from '../../services/userService';
-import { AiFillEdit, AiOutlineDelete, AiOutlinePlus } from "react-icons/ai";
-import ModalUser from './ModalUser';
+import { TypeAnimation } from 'react-type-animation';
+
 import { emitter } from '../../utils/emitter';
 import './UserManage.scss';
-import ModelEditUser from './ModelEditUser';
+
 class UserManage extends Component {
 
 
@@ -110,77 +110,42 @@ class UserManage extends Component {
         }
     }
 
+
+
+
+
     render() {
+
         const arrUsers = this.state.arrUsers
         return (
-            <div className="user-container">
-                <ModalUser isOpenModel={this.state.isOpenModel}
-                    toggleUserModel={this.toggleUserModel}
-                    createNewUser={this.createNewUser}
-                />
-                {this.state.isOpenModelEditUser &&
-                    <ModelEditUser
-                        isOpenModel={this.state.isOpenModelEditUser}
-                        toggleUserModel={this.toggleEditUserModel}
-                        userCurrent={this.state.userEdit}
-                        editUser={this.editUser}
-                    />
-                }
+            <>
+                <div className="admin-contain">
+                    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="hero-container" data-aos="fade-in">
+                            <h1>Welcome</h1>
+                            <p><span className="typed" >
+                                <TypeAnimation
+                                    sequence={[
+                                        // Same substring at the start will only be typed once, initially
+                                        'Admin',
+                                        1000,
+                                        'Doctors',
+                                        1000,
+                                        'We provide exceptional healthcare',
+                                        1000,
+                                    ]}
+                                    speed={50}
+                                    style={{ fontSize: '26px' }}
+                                    repeat={Infinity}
+                                />
+                            </span></p>
 
-                <div className="title text-center">
-                    Manage users
+                        </div>
+                    </section>
                 </div>
-                <div className="mx-1">
-                    <button className='btn btn-primary px-3'
-                        onClick={() => { this.handleAddNewUser() }}
-                    > <AiOutlinePlus className='mx-1' /> Add new user</button>
-                </div>
-                <div className="users-table mt-4 mx-1">
-                    <table id="customers">
-                        <tbody>
-                            <tr>
-                                <th>Mail</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Address</th>
-                                <th>Phone Number</th>
-                                <th>Action</th>
-                            </tr>
-
-                            {
-                                arrUsers && arrUsers.length > 0 && arrUsers.map((item, index) => {
-                                    return (
-                                        <>
-                                            <tr key={index}>
-                                                <td>{item.email}</td>
-                                                <td>{item.firstName}</td>
-                                                <td>{item.lastName}</td>
-                                                <td>{item.address}</td>
-                                                <td>{item.phoneNumber}</td>
-                                                <td className='action-crud'>
-                                                    <button className='mx-2' onClick={() => { this.handleEditUser(item) }}>Edit
-                                                        <i>
-                                                            <AiFillEdit />
-                                                        </i>
-                                                    </button>
-
-                                                    <button className='mx-2' onClick={() => this.handleDeleteUser(item)}>Delete
-                                                        <i>
-                                                            <AiOutlineDelete />
-                                                        </i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        </>
-                                    )
-                                })
-                            }
-                        </tbody>
+            </>
 
 
-                    </table>
-                </div>
-            </div>
         );
     }
 

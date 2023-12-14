@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
+import { FaCaretDown } from "react-icons/fa";
 import './Navigator.scss';
 
 class MenuGroup extends Component {
@@ -9,19 +10,17 @@ class MenuGroup extends Component {
     render() {
         const { name, children } = this.props;
         return (
-            <>
-                
-                <li className="menu-group">
-                    <div className="menu-group-name">
-
-
-                        <FormattedMessage id={name} />
-                    </div>
-                    <ul className="menu-list list-unstyled">
-                        {children}
-                    </ul>
-                </li>
-            </>
+            <li className="menu-group">
+                <div className="menu-group-name">
+                    <FormattedMessage id={name} />
+                    <span>
+                        <FaCaretDown />
+                    </span>
+                </div>
+                <ul className="menu-list list-unstyled">
+                    {children}
+                </ul>
+            </li>
         );
     }
 }

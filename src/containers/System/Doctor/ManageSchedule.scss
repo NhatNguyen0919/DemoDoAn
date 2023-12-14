@@ -1,11 +1,36 @@
 .manage-schedule-container {
+    max-width: 1920px;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px 0;
+    background-color: #f5f4f9;
+
+    .manage-schedule-wrapper {
+
+        width: 80%;
+        padding: 50px 80px 50px 0;
+
+    }
+
     .m-s-title {
-        text-transform: uppercase;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        font-weight: 600;
-        font-size: 17px;
-        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 50px;
+        padding-bottom: 20px;
+        position: relative;
+        color: #173b6c;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #149ddd;
+            bottom: 0;
+            left: 0;
+        }
     }
 
     .pick-hour-container {

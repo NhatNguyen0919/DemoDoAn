@@ -1,11 +1,37 @@
 .manage-specialty-container {
-    padding: 0 15px;
+    max-width: 1920px;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px 0;
+    background-color: #f5f4f9;
+
+
+
+    .manage-specialty-wrapper {
+        padding: 50px 80px 50px 0;
+        width: 80%;
+
+    }
+
     .ms-title {
-        margin: 10px 0;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 17px;
+        font-size: 32px;
         font-weight: bold;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        color: #173b6c;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #149ddd;
+            bottom: 0;
+            left: 0;
+        }
     }
 
 }

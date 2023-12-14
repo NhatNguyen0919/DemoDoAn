@@ -79,31 +79,35 @@ class ManageSpecialty extends Component {
         return (
             <>
                 <div className='manage-specialty-container'>
-                    <div className="ms-title">Manage specialty</div>
+                    <div className="manage-specialty-wrapper">
 
-                    <div className="all-specialty row">
-                        <div className="col-6 form-group">
-                            <label htmlFor="">Tên chuyên khoa</label>
-                            <input className='form-control' type='text' value={this.state.name}
-                                onChange={(e) => this.handleOnchangeInput(e, "name")} />
+
+                        <div className="ms-title">Manage specialty</div>
+
+                        <div className="all-specialty row">
+                            <div className="col-6 my-5 form-group">
+                                <label htmlFor="">Tên chuyên khoa</label>
+                                <input className='form-control' type='text' value={this.state.name}
+                                    onChange={(e) => this.handleOnchangeInput(e, "name")} />
+                            </div>
+                            <div className="col-sm-4  my-5 form-group">
+                                <label htmlFor="">Ảnh chuyên khoa</label>
+                                <input className='form-control' type='file'
+                                    onChange={(e) => this.handleOnchangeImg(e)}
+                                />
+                            </div>
                         </div>
-                        <div className="col-sm-4 form-group">
-                            <label htmlFor="">Ảnh chuyên khoa</label>
-                            <input className='form-control' type='file'
-                                onChange={(e) => this.handleOnchangeImg(e)}
+                        <div className="col-12 ">
+                            <MdEditor
+                                style={{ height: '300px' }}
+                                renderHTML={text => mdParser.render(text)}
+                                onChange={this.handleEditorChange}
+                                value={this.state.descriptionMarkdown}
                             />
                         </div>
-                    </div>
-                    <div className="col-12 ">
-                        <MdEditor
-                            style={{ height: '300px' }}
-                            renderHTML={text => mdParser.render(text)}
-                            onChange={this.handleEditorChange}
-                            value={this.state.descriptionMarkdown}
-                        />
-                    </div>
-                    <div className="col-12">
-                        <button className='btn btn-primary' onClick={() => this.handleSaveSpecialty()}>Save</button>
+                        <div className="col-12 mt-5">
+                            <button className='btn btn-second' onClick={() => this.handleSaveSpecialty()}>Save</button>
+                        </div>
                     </div>
                 </div>
             </>

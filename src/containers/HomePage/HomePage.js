@@ -33,8 +33,6 @@ class HomePage extends Component {
         return (
             <>
                 
-
-
                 <HomeHeader isShowBanner={true} />
                 <WhyChoose />
                 <OurService />
@@ -45,7 +43,6 @@ class HomePage extends Component {
                 <About />
                 <DownLoad />
                 <HomeFooter />
-
 
             </>
         );

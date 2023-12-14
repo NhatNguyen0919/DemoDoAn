@@ -15,8 +15,8 @@ class System extends Component {
                 <div className="system-container">
                     <div className="system-list">
                         <Switch>
-                            <Route path="/system/user-manage" component={UserManage} />
                             <Route path="/system/user-redux" component={UserRedux} />
+                            <Route path="/system/user-manage" component={UserManage} />
                             <Route path="/system/manage-doctor" component={ManageDoctor} />
                             <Route path="/system/specialty-manage" component={ManageSpecialty} />
                             <Route component={() => { return (<Redirect to={systemMenuPath} />) }} />
