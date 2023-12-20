@@ -9,7 +9,6 @@ import * as actions from '../../../store/actions';
 import { getAllDetailInfoDoctors } from '../../../services/userService';
 import { FaHeart } from "react-icons/fa";
 import { toast } from 'react-toastify';
-import ReactPaginate from 'react-paginate';
 
 
 
@@ -21,9 +20,10 @@ class AllDoctor extends Component {
             arrDoctors: [],
             doctorInfor: '',
             isHeart: false,
-            currentPage: '',
-            postsPerPage: ''
-        }
+            currentPage: 1,
+            postsPerPage: 2,
+        };
+        this.handlePageClick = this.handlePageClick.bind(this);
     }
 
     async componentDidMount() {
@@ -56,14 +56,94 @@ class AllDoctor extends Component {
     }
 
     handlePageClick = (event) => {
-
+        this.setState({
+            currentPage: Number(event.target.id),
+        });
     }
+
+
+
 
 
     render() {
 
-        let { arrDoctors, doctorInfor } = this.state;
+        let { arrDoctors, doctorInfor, currentPage, postsPerPage } = this.state;
         let { language } = this.props;
+
+        const indexOfLastPost = currentPage * postsPerPage;
+        const indexOfFirstPost = indexOfLastPost - postsPerPage;
+        const currentPost = arrDoctors.slice(indexOfFirstPost, indexOfLastPost);
+
+        const arrRender = currentPost.map((item, index) => {
+            let imageBase64 = '';
+            if (item.image) {
+                imageBase64 = new Buffer(item.image, 'base64').toString('binary');
+            }
+            let nameVi = `${item.positionData.valueVi}, ${item.lastName} ${item.firstName}`;
+            let nameEn = `${item.positionData.valueEn}, ${item.lastName} ${item.firstName}`;
+            return (
+                <>
+                    <div className="single-doctor" key={index}>
+                        <div className="left">
+                            <div className="col-md-12">
+                                <img src={imageBase64} alt="" />
+                            </div>
+                        </div>
+                        <div className="right">
+                            <h4>{language === LANGUAGES.VI ? nameVi : nameEn}</h4>
+                            {doctorInfor && doctorInfor.length > 0 && doctorInfor.map((content, num) => {
+                                if (item.id === content.id) {
+                                    console.log("check markdown :", content.Markdown)
+                                    if (content.Markdown) {
+                                        return (
+                                            <>
+                                                <div key={num}>Chuyên khoa</div>
+                                                <p>{content.Markdown.description}</p>
+                                            </>
+                                        )
+                                    } else {
+                                        return (
+                                            <>
+                                                <div key={num}>Chuyên khoa</div>
+                                                <p>Fail to compile</p>
+                                            </>
+                                        )
+                                    }
+
+
+                                }
+                            })}
+                            <button onClick={() => this.handleViewDetailDoctor(item)}>
+                                View More
+                            </button>
+                            <button onClick={() => this.handleHeart()}>
+
+                                <i><FaHeart ></FaHeart></i>
+                            </button>
+                        </div>
+                    </div>
+                </>
+            )
+
+        })
+
+        const pageNumbers = [];
+        for (let i = 1; i <= Math.ceil(arrDoctors.length / postsPerPage); i++) {
+            pageNumbers.push(i);
+        }
+
+        const renderPageNumbers = pageNumbers.map(number => {
+            return (
+                <li
+                    key={number}
+                    id={number}
+                    onClick={(e) => this.handlePageClick(e)}
+                    className={number === currentPage ? "active" : ""}
+                >
+                    {number}
+                </li>
+            );
+        });
 
         return (
             <>
@@ -78,59 +158,17 @@ class AllDoctor extends Component {
                             <div className="col-lg-4">
 
                             </div>
+
                             <div className="col-lg-8">
+                                <ul>
+                                    {arrRender}
+                                </ul>
 
-                                {arrDoctors && arrDoctors.length > 0 && arrDoctors.map((item, index) => {
-                                    let imageBase64 = '';
-                                    if (item.image) {
-                                        imageBase64 = new Buffer(item.image, 'base64').toString('binary');
-                                    }
-                                    let nameVi = `${item.positionData.valueVi}, ${item.lastName} ${item.firstName}`;
-                                    let nameEn = `${item.positionData.valueEn}, ${item.lastName} ${item.firstName}`;
-                                    return (
-                                        <>
-                                            <div className="single-doctor" key={index}>
-                                                <div className="left">
-                                                    <div className="col-md-12">
-                                                        <img src={imageBase64} alt="" />
-                                                    </div>
-                                                </div>
-                                                <div className="right">
-                                                    <h4>{language === LANGUAGES.VI ? nameVi : nameEn}</h4>
-                                                    {doctorInfor && doctorInfor.length > 0 && doctorInfor.map((content, num) => {
-                                                        if (item.id === content.id) {
-                                                            console.log("check markdown :", content.Markdown)
-                                                            if (content.Markdown) {
-                                                                return (
-                                                                    <>
-                                                                        <div key={num}>Chuyên khoa</div>
-                                                                        <p>{content.Markdown.description}</p>
-                                                                    </>
-                                                                )
-                                                            } else {
-                                                                return (
-                                                                    <>
-                                                                        <div key={num}>Chuyên khoa</div>
-                                                                        <p>Fail to compile</p>
-                                                                    </>
-                                                                )
-                                                            }
-
-
-                                                        }
-                                                    })}
-                                                    <button onClick={() => this.handleViewDetailDoctor(item)}>
-                                                        View More
-                                                    </button>
-                                                    <button onClick={() => this.handleHeart()}>
-
-                                                        <i><FaHeart ></FaHeart></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </>
-                                    )
-                                })}
+                            </div>
+                            <div className='page-item-li'>
+                                <ul id="page-numbers" >
+                                    {renderPageNumbers}
+                                </ul>
 
                             </div>
 

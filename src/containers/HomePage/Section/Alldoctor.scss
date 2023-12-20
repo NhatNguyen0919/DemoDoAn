@@ -1,5 +1,5 @@
 .all-doctor-body {
-    height: 800px;
+    background-color: #f5f4f9;
 
 
     .all-doctor-title {
@@ -15,12 +15,19 @@
         }
     }
 
+
+    .active {
+        background: #005963 !important;
+    }
+
     .all-doctor-container {
         .single-doctor {
             width: 700px;
             border: 1px solid #e3e4e4;
             display: flex;
-            border-radius: 5px;
+            background: #fff;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 15px;
             margin-bottom: 50px;
 
 
@@ -105,13 +112,44 @@
                     }
 
                 }
+
                 .active {
                     background-color: #005963;
                 }
             }
         }
-    }
 
-    
+        .page-item-li {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+
+            #page-numbers {
+                display: flex;
+                gap: 12px;
+
+
+                li {
+                    list-style: none;
+                    color: #fff;
+                    font-weight: bold;
+                    border-radius: 5px;
+                    float: left;
+                    padding: 8px 16px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    background-color: #00acb1;
+
+                    &:hover {
+                        background-color: #038a8f;
+
+                    }
+                }
+
+            }
+
+        }
+    }
 
 }

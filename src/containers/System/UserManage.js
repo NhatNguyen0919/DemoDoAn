@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
+// import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { getAllUsers, createNewUserService, deleteUSerService, editUserService } from '../../services/userService';
 import { TypeAnimation } from 'react-type-animation';
@@ -116,7 +116,7 @@ class UserManage extends Component {
 
     render() {
 
-        const arrUsers = this.state.arrUsers
+        // const arrUsers = this.state.arrUsers
         return (
             <>
                 <div className="admin-contain">

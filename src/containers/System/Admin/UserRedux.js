@@ -258,9 +258,8 @@ class UserRedux extends Component {
             <>
                 <div className='user-redux-container'>
                     <div className="user-redux-body " >
-                        <div className='user-redux-title'>Register Information</div>
                         <div className='container'>
-                            <div className="col-12 my-3 add-user"><FormattedMessage id="manage-users.add" /></div>
+                            <div className="col-12 my-3 user-redux-title"><FormattedMessage id="manage-users.add" /></div>
                             <div className="row">
                                 <div className="col-12 my-5">
                                     <button className={"btn btn-secondary"}

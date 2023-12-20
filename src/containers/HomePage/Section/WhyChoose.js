@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './WhyChoose.scss';
 import { FormattedMessage } from 'react-intl';
-import { FaBriefcaseMedical } from "react-icons/fa6";
+import { FaBriefcaseMedical, FaSuitcaseMedical, FaCommentMedical } from "react-icons/fa6";
 import doctors from "../../../assets/images/medical-discussion-with-colleague.jpg"
 import doctors2 from "../../../assets/images/elderly-female-smiling-with-doctor-visiting-senior-patient-woman-hospital-ward.jpg";
 import Counter from './Counter';
+import { FaHandHoldingMedical, FaNotesMedical } from "react-icons/fa";
 
 
 
@@ -28,12 +29,15 @@ class Specialty extends Component {
                                                 <li><i><FaBriefcaseMedical></FaBriefcaseMedical></i><FormattedMessage id="banner.quality" />
                                                     <p>"<FormattedMessage id="banner.quality-rs" />"</p>
                                                 </li>
-                                                <li><i><FaBriefcaseMedical></FaBriefcaseMedical></i><FormattedMessage id="banner.quality-doctor" />
-                                                    <p>"<FormattedMessage id="banner.quality-doctor-rs" />"</p></li>
-                                                <li><i><FaBriefcaseMedical></FaBriefcaseMedical></i><FormattedMessage id="banner.feedback-doctor" />
-                                                    <p>"<FormattedMessage id="banner.feedback-rs" />"</p></li>
-                                                <li><i><FaBriefcaseMedical></FaBriefcaseMedical></i><FormattedMessage id="banner.support-cus" />
-                                                    <p>"<FormattedMessage id="banner.support-rs" />"</p></li>
+                                                <li><i><FaHandHoldingMedical></FaHandHoldingMedical></i><FormattedMessage id="banner.quality-doctor" />
+                                                    <p>"<FormattedMessage id="banner.quality-doctor-rs" />"</p>
+                                                </li>
+                                                <li><i><FaCommentMedical></FaCommentMedical></i><FormattedMessage id="banner.feedback-doctor" />
+                                                    <p>"<FormattedMessage id="banner.feedback-rs" />"</p>
+                                                </li>
+                                                <li><i><FaNotesMedical ></FaNotesMedical></i><FormattedMessage id="banner.support-cus" />
+                                                    <p>"<FormattedMessage id="banner.support-rs" />"</p>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>

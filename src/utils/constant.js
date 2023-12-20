@@ -5,7 +5,9 @@ export const path = {
     REGISTER: '/register',
     LOG_OUT: '/logout',
     SYSTEM: '/system',
-    DETAIL_DOCTOR: '/detail-doctor/:id'
+    DETAIL_DOCTOR: '/detail-doctor/:id',
+    VERIFY_EMAIL_BOOKING: '/verify-booking',
+    DETAIL_SPECIALTY: '/detail-specialty/:id'
 };
 
 export const LANGUAGES = {
@@ -27,11 +29,11 @@ export const dateFormat = {
 export const YesNoObj = {
     YES: 'Y',
     NO: 'N'
-};
+}
 
 export const USER_ROLES = {
     ADMIN: 'R1',
     DOCTOR: 'R2',
-    PATIENT :'R3',
-    
-};
+    PATIENT: 'R3',
+
+}

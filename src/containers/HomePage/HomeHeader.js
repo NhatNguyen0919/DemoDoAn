@@ -70,7 +70,6 @@ class HomeHeader extends Component {
     render() {
         window.addEventListener("scroll", this.changeColor);
         let language = this.props.language;
-        console.log("check click :", this.state.click);
 
         return (
             <>
@@ -98,7 +97,7 @@ class HomeHeader extends Component {
                                     <Link to="/AllDoctor" ><b><FormattedMessage id="homeheader.doctors" /></b></Link>
                                 </li>
                                 <li>
-                                    <div ><FormattedMessage id="homeheader.contact" /></div>
+                                    <Link to="/Support" ><b><FormattedMessage id="homeheader.contact" /></b></Link>
                                 </li>
                             </ul>
 
@@ -124,7 +123,7 @@ class HomeHeader extends Component {
                             </div>
                         </div>
                         <div className="right-content" >
-                            <div className="support"><i><AiOutlineQuestionCircle /></i><a href=""><FormattedMessage id="homeheader.support" /></a> </div>
+                            <div className="support"><i><AiOutlineQuestionCircle /></i> <Link to="/Support" ><b><FormattedMessage id="homeheader.contact" /></b></Link> </div>
                             <div className='menu-language'><FormattedMessage id="homeheader.language" /> <AiFillCaretDown />
                                 <ul className='dropdown'>
                                     <li className={language === LANGUAGES.VI ? "language-vi active" : "language-vi"}><span onClick={() => this.changLanguage(LANGUAGES.VI)}>VN</span></li>

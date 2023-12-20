@@ -146,7 +146,6 @@ class Login extends Component {
                                 <i ><a href="#" className='google'><GrGoogle></GrGoogle></a></i>
                                 <i ><a href="#" className='github'><GrGithub></GrGithub></a></i>
                             </div>
-                            <div className="col-12 text-center sign-up">Not a member ? <a onClick={() => this.returnRegister()} href="" style={{ color: 'white', opacity: "0.6" }}>Sign up</a></div>
                         </div>
                     </div>
                 </div>

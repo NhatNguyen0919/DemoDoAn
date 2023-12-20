@@ -3,14 +3,17 @@
     height: 100vh;
     display: flex;
     justify-content: flex-end;
-    padding: 50px 0;
+    padding: 50px 50px 50px 0 ;
     background-color: #f5f4f9;
 
 
 
     .manage-specialty-wrapper {
-        padding: 50px 80px 50px 0;
+        padding: 60px;
         width: 80%;
+        background: #fff;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 15px;
 
     }
 

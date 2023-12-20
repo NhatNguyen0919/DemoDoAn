@@ -56,7 +56,7 @@ class ManageSpecialty extends Component {
         let file = data[0];
         if (file) {
             let base64 = await CommonUtils.getBase64(file);
-            const objectUrl = URL.createObjectURL(file);
+            // const objectUrl = URL.createObjectURL(file);
             this.setState({
                 imageBase64: base64
             })
@@ -106,7 +106,7 @@ class ManageSpecialty extends Component {
                             />
                         </div>
                         <div className="col-12 mt-5">
-                            <button className='btn btn-second' onClick={() => this.handleSaveSpecialty()}>Save</button>
+                            <button className='btn btn-secondary' onClick={() => this.handleSaveSpecialty()}>Save</button>
                         </div>
                     </div>
                 </div>

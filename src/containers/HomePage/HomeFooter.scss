@@ -7,9 +7,9 @@
 
     .footer-mid {
         max-width: 1140px;
-        background-color: #fcf7ff;
+        background-color: #f5f4f9;
         padding: 20px 50px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         border-radius: 15px;
         margin: 0 auto;
 
@@ -68,31 +68,33 @@
         bottom: 0;
         padding: 20px;
         width: 100%;
-        
-        .footer-bot-container{
+
+        .footer-bot-container {
             display: flex;
             justify-content: space-between;
             margin: 0 auto;
             width: 70%;
+
             .left {
-                a{
+                a {
                     font-weight: bold;
                     color: #005963;
                     text-decoration: none;
                 }
+
                 p {
                     font-size: 16px;
                     line-height: 1.8;
                     color: #686a6f;
                 }
             }
-    
+
             .right {
                 ul {
                     display: flex;
-    
+
                     li {
-    
+
                         list-style: none;
                         margin: 0 5px;
                         font-weight: 400;

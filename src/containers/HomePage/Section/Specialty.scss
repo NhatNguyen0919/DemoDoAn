@@ -1,102 +1,99 @@
-.section-specialty {
-    height: 330px;
-    background: #f5f5f5;
-    margin-top: 115px;
+.specialty-wrapper {
+    height: 550px;
+    background: #f5f4f9;
+    padding: 20px 0;
 
-
-    .specialty-container {
+    .section-container {
+        height: 100%;
         width: 1170px;
         display: block;
         margin: 0 auto;
-        padding-top: 20px;
-        padding-bottom: 30px;
         position: relative;
 
-
-        .specialty-header {
-            margin-bottom: 20px;
-
-            h3 {
-                font-size: 24px;
-                font-weight: bold;
-                padding: 15px 0px 5px 0px;
-            }
-
+        .section-header {
             button {
                 position: absolute;
                 right: 7px;
-                top: 26px;
+                top: 0;
                 padding: 10px;
                 border: none;
                 color: #b9b8ba;
                 background: #ebebeb;
-
-                &:hover {
-                    background: rgba(184, 184, 4, 0.884);
-                    color: rgba(255, 253, 253, 0.904);
-                }
+                border-radius: 5px;
             }
         }
 
-        .specialty-body {
+        .section-body {
+            margin-top: 50px;
 
-            .specialty-customize {
+            .section-customize {
+                overflow: hidden;
+
                 .bg-image {
-                    background: url("https://cdn.bookingcare.vn/fr/w300/2023/06/20/112457-co-xuong-khop.jpg");
-                    height: 150px;
-                    width: 278px;
+                    width: 350px;
+                    height: 230px;
                     background-position: center center;
                     background-repeat: no-repeat;
                     background-size: cover;
-                    padding-left: 5px;
-                    padding-right: 5px;
-                    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-                    ;
+                    border-radius: 6px 6px 0 0;
+
                 }
 
                 .custom-text {
-                    color: #111;
-                    padding: 6px 0;
-                    font-size: 15px;
-                    opacity: 0.7;
+                    width: 350px;
+                    height: 150px;
+                    border: 2px solid #ebf2f3;
+                    border-radius: 0 0 6px 6px;
+                    padding: 30px;
 
-                    &:hover {
+                    h4 {
+                        color: #005963;
+                        font-size: 20px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
                         cursor: pointer;
-                        color: #49bce2;
+
+                        &:hover {
+                            color: #02717e;
+
+                        }
+
                     }
-                }
-            }
 
-            .slick-prev {
-                height: 48px !important;
-                width: 44px !important;
-                z-index: 10;
-                margin-left: 20px !important;
-                background: #215159 !important;
-                opacity: 0.7;
+                    .readmore {
+                        margin-top: 20px;
+                        display: flex;
+                        align-items: center;
+                        color: #00acb1;
+                        font-size: 16px;
+                        font-weight: bold;
+                        cursor: pointer;
+
+
+                        i {
+                            margin-left: 5px;
+                            transition: 0.2s linear;
+                        }
+
+                        &:hover {
+                            color: #005963;
+
+                            i {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+
+                }
+
 
                 &:hover {
-                    opacity: 1;
-                }
-            }
-
-            .slick-next {
-                height: 48px !important;
-                width: 44px !important;
-                z-index: 10;
-                margin-right: 20px !important;
-                background: #215159 !important;
-                opacity: 0.7;
-
-
-                &:hover {
-                    opacity: 1;
+                    .custom-text {
+                        background: #ffffff;
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    }
                 }
             }
         }
     }
-
-
 }
-
-// reset slick slider css

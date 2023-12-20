@@ -157,6 +157,7 @@ class ManageSchedule extends Component {
             <>
                 <div className='manage-schedule-container'>
                     <div className="manage-schedule-wrapper">
+
                         <div className="m-s-title">
                             <FormattedMessage id="manage-schedule.title" />
                         </div>
@@ -199,7 +200,7 @@ class ManageSchedule extends Component {
 
                                 </div>
                             </div>
-                            <button class="btn btn-primary btn-lg btn-save-schedule" type="submit"
+                            <button class="btn btn-primary btn-lg btn-save-schedule " type="submit"
                                 onClick={() => this.handleSaveSchedule()}
                             ><FormattedMessage id="manage-schedule.save-in4" /></button>
                         </div>

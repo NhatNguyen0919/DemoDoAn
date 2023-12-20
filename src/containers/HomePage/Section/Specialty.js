@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import '../HomePage.scss';
+import './Specialty.scss';
 import Slider from "react-slick";
 import { FormattedMessage } from 'react-intl';
 import { getAllSpecialty } from '../../../services/userService';
+import { withRouter } from 'react-router';
+import { FaArrowRightLong } from "react-icons/fa6";
+
 
 
 class Specialty extends Component {
@@ -32,12 +35,20 @@ class Specialty extends Component {
 
     }
 
+    handleViewDetailSpecialty = (item) => {
+        if (this.props.history) {
+            
+            this.props.history.push(`detail-specialty/${item.id}`)
+        }
+    }
+
 
     render() {
         let { dataSpecialty } = this.state;
+        console.log("check state", dataSpecialty);
         return (
             <div>
-                <div className='section-wrapper section-specialty'>
+                <div className='specialty-wrapper '>
                     <div className='section-container'>
                         <div className="section-header">
                             <h3>Chuyên khoa phổ biến</h3>
@@ -45,21 +56,30 @@ class Specialty extends Component {
                         </div>
 
                         <div className="section-body">
-                            <Slider {...this.props.settings}>
-                                {dataSpecialty && dataSpecialty.length > 0 &&
-                                    dataSpecialty.map((item, index) => {
-                                        return (
-                                            <div className='section-customize' key={index}>
-                                                <div className='bg-image section-specialty'
-                                                    style={{ backgroundImage: `url(${item.image})` }}
-                                                />
-                                                <div className='custom-text'>{item.name} </div>
-                                            </div>
-                                        )
-                                    })
-                                }
+                            <div className="row">
+                                <Slider {...this.props.settings}>
+                                    {dataSpecialty && dataSpecialty.length > 0 &&
+                                        dataSpecialty.map((item, index) => {
+                                            return (
+                                                <div className='section-customize' key={index}
+                                                    onClick={() => this.handleViewDetailSpecialty(item)}
+                                                >
+                                                    <div className='bg-image section-specialty'
+                                                        style={{ backgroundImage: `url(${item.image})` }}
+                                                    />
+                                                    <div className='custom-text'>
+                                                        <h4>{item.name}</h4>
+                                                        <div className='readmore'>Readmore <i><FaArrowRightLong /></i> </div>
+                                                    </div>
 
-                            </Slider>
+                                                </div>
+                                            )
+                                        })
+                                    }
+
+                                </Slider>
+
+                            </div>
                         </div>
 
                     </div>
@@ -83,4 +103,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Specialty));

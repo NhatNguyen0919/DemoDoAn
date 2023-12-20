@@ -322,14 +322,14 @@ class ManageDoctor extends Component {
                     </div>
                     <div className='manage-doctor-editor'>
                         <MdEditor
-                            style={{ height: '500px' }}
+                            style={{ height: '300px' }}
                             renderHTML={text => mdParser.render(text)}
                             onChange={this.handleEditorChange}
                             value={this.state.contentMarkdown}
                         />
                     </div>
                     <button onClick={() => this.handleSaveContentMarkdown()}
-                        className={this.state.hasOldData === false ? "btn btn-secondary" : "btn btn-dark"}
+                        className={this.state.hasOldData === false ? "btn btn-secondary my-3" : "btn btn-dark my-3"}
                     >{this.state.hasOldData === false ?
                         <span><FormattedMessage id="admin.manage-doctor.add" /></span> :
                         <span><FormattedMessage id="admin.manage-doctor.save" /></span>
