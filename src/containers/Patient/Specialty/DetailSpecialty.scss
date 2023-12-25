@@ -50,7 +50,7 @@
             text-decoration: none;
             opacity: 0.6;
 
-            &:hover{
+            &:hover {
                 text-decoration: underline;
                 opacity: 0.9;
             }
@@ -69,9 +69,21 @@
             .left {
                 width: 50%;
                 border-right: 1px solid #ddd;
-                .view-detail-doctor{
+
+                .view-detail-doctor {
                     margin-left: 25px;
                     margin-top: 10px;
+                }
+
+                .profile-container {
+                    .down {
+                        padding: 2px;
+
+                        span {
+                            line-height: 1.6;
+                            opacity: 0.8;
+                        }
+                    }
                 }
             }
 
@@ -89,6 +101,8 @@
                         padding-left: 0 !important;
                     }
                 }
+
+
 
             }
         }

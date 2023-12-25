@@ -94,7 +94,7 @@ class HomeHeader extends Component {
                                     <div ><FormattedMessage id="menu.admin.clinic" /></div>
                                 </li>
                                 <li>
-                                    <Link to="/AllDoctor" ><b><FormattedMessage id="homeheader.doctors" /></b></Link>
+                                    <Link to="/Alldoctor" ><b><FormattedMessage id="homeheader.doctors" /></b></Link>
                                 </li>
                                 <li>
                                     <Link to="/Support" ><b><FormattedMessage id="homeheader.contact" /></b></Link>
@@ -106,7 +106,7 @@ class HomeHeader extends Component {
                         </div>
                         <div className="center-content" onClick={(e) => { this.handleNavBarFalse(e) }}>
                             <div className="child-content">
-                                <div><b> <FormattedMessage id="homeheader.speciality" /></b></div>
+                                <div><Link to="/Allspecialty" ><b> <FormattedMessage id="homeheader.speciality" /></b></Link></div>
                                 <div className='sub-title'><FormattedMessage id="homeheader.searchdoctor" /></div>
                             </div>
                             <div className="child-content">
@@ -114,8 +114,8 @@ class HomeHeader extends Component {
                                 <div className='sub-title'><FormattedMessage id="homeheader.select-room" /></div>
                             </div>
                             <div className="child-content">
-                                <Link to="/AllDoctor" ><b><FormattedMessage id="homeheader.doctors" /></b></Link>
-                                <Link to="/AllDoctor" className='sub-title'><FormattedMessage id="homeheader.select-doctors" /></Link>
+                                <Link to="/Alldoctor" ><b><FormattedMessage id="homeheader.doctors" /></b></Link>
+                                <Link to="/Alldoctor" className='sub-title'><FormattedMessage id="homeheader.select-doctors" /></Link>
                             </div>
                             <div className="child-content">
                                 <div><b ><FormattedMessage id="homeheader.fee" /></b></div>

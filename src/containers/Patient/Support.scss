@@ -1,6 +1,8 @@
 .support-container {
     background-color: #f5f4f9;
     height: 100vh;
+    display: flex;
+    justify-content: center;
 
     .support-title {
         padding: 50px;
@@ -16,9 +18,12 @@
     }
 
     .request-container {
-        width: 100%;
+        width: 60%;
+        height: 80%;
+        margin: auto;
         display: flex;
         justify-content: center;
+        align-items: center;
 
 
         .request-body {

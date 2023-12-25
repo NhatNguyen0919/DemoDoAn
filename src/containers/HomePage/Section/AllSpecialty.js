@@ -4,25 +4,23 @@ import { LANGUAGES } from '../../../utils';
 import { FormattedMessage } from 'react-intl';
 import HomeHeader from '../HomeHeader';
 import HomeFooter from '../HomeFooter';
-import "./Alldoctor.scss";
+import "./AllSpecialty.scss";
 import * as actions from '../../../store/actions';
-import { getAllDetailInfoDoctors } from '../../../services/userService';
+import { getAllSpecialty } from '../../../services/userService';
 import { FaHeart } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import { Link } from 'react-router-dom';
-import { FaLocationDot } from "react-icons/fa6";
 
 
 
-class AllDoctor extends Component {
+class AllSpecialty extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            arrDoctors: [],
-            doctorInfor: '',
+            arrSpecialty: [],
             isHeart: false,
             currentPage: 1,
             postsPerPage: 2,
@@ -32,10 +30,10 @@ class AllDoctor extends Component {
 
     async componentDidMount() {
         this.props.loadTopDoctors();
-        let res = await getAllDetailInfoDoctors();
+        let res = await getAllSpecialty();
         if (res && res.errorCode === 0) {
             this.setState({
-                doctorInfor: res.data
+                arrSpecialty: res.data
             })
         }
     }
@@ -43,15 +41,11 @@ class AllDoctor extends Component {
 
 
     async componentDidUpdate(prevProps, prevStates) {
-        if (prevProps.topDoctors !== this.props.topDoctors) {
-            this.setState({
-                arrDoctors: this.props.topDoctors
-            })
-        }
+
     }
 
-    handleViewDetailDoctor = (doctor) => {
-        this.props.history.push(`/detail-doctor/${doctor.id}`)
+    handleViewDetailDoctor = (specialty) => {
+        this.props.history.push(`/detail-specialty/${specialty.id}`)
     }
 
     handleHeart = () => {
@@ -70,56 +64,38 @@ class AllDoctor extends Component {
 
     render() {
 
-        let { arrDoctors, doctorInfor, currentPage, postsPerPage } = this.state;
+        let { arrSpecialty, currentPage, postsPerPage } = this.state;
         let { language } = this.props;
         console.log("chek state", this.state);
 
         const indexOfLastPost = currentPage * postsPerPage;
         const indexOfFirstPost = indexOfLastPost - postsPerPage;
-        const currentPost = arrDoctors.slice(indexOfFirstPost, indexOfLastPost);
+        const currentPost = arrSpecialty.slice(indexOfFirstPost, indexOfLastPost);
 
         const arrRender = currentPost.map((item, index) => {
-            let imageBase64 = '';
-            if (item.image) {
-                imageBase64 = new Buffer(item.image, 'base64').toString('binary');
-            }
-            let nameVi = `${item.positionData.valueVi}, ${item.lastName} ${item.firstName}`;
-            let nameEn = `${item.positionData.valueEn}, ${item.lastName} ${item.firstName}`;
+            let imageBase64 = item.image;
+
+
             return (
-                <div key={index}>
-                    <div className="single-doctor" key={index}>
+                <>
+                    <div className="single-specialty" key={index}>
                         <div className="left">
                             <div className="col-md-12">
                                 <img src={imageBase64} alt="" />
                             </div>
                         </div>
                         <div className="right">
-                            <h4>{language === LANGUAGES.VI ? nameVi : nameEn}</h4>
-                            {doctorInfor && doctorInfor.length > 0 && doctorInfor.map((content, num) => {
-                                const specialtyName = content.Doctor_Infor?.specialtyTypeData?.name || "Unknown Specialty";
-                                const provinceNameVi = content.Doctor_Infor?.provinceTypeData?.valueVi || "Unknown Specialty"
-                                const provinceNameEn = content.Doctor_Infor?.provinceTypeData?.valueEn || "Unknown Specialty"
+                            <h4></h4>
+                            {arrSpecialty && arrSpecialty.length > 0 && arrSpecialty.map((content, num) => {
 
                                 if (item.id === content.id) {
-                                    console.log("check markdown :", content.Markdown)
-                                    if (content.Markdown) {
-                                        return (
-                                            <div key={index}>
-                                                <div key={num}>Chuyên khoa: {specialtyName}</div>
-                                                <div className='location'><i><FaLocationDot /></i> {language === LANGUAGES.VI ? provinceNameVi : provinceNameEn}</div>
-                                                <p>{content.Markdown.description}</p>
-                                            </div>
-                                        )
-                                    } else {
-                                        return (
-                                            <div key={index}>
-                                                <div key={num}>Chuyên khoa</div>
-                                                <div >Chuyên khoa</div>
-                                                <p>Fail to compile</p>
-                                            </div>
 
-                                        )
-                                    }
+                                    return (
+                                        <>
+                                            <div key={num}><h3> {item.name}</h3></div>
+                                        </>
+                                    )
+
 
 
                                 }
@@ -136,13 +112,13 @@ class AllDoctor extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </>
             )
 
         })
 
         const pageNumbers = [];
-        for (let i = 1; i <= Math.ceil(arrDoctors.length / postsPerPage); i++) {
+        for (let i = 1; i <= Math.ceil(arrSpecialty.length / postsPerPage); i++) {
             pageNumbers.push(i);
         }
 
@@ -165,17 +141,17 @@ class AllDoctor extends Component {
                 <HomeHeader />
                 <div className="all-doctor-body">
                     <div className="all-doctor-title">
-                        <h2>Doctor List</h2>
+                        <h2>Specialty List</h2>
                         <Breadcrumbs aria-label="breadcrumb">
                             <Link to="/home">
                                 Home
                             </Link>
 
 
-                            <Typography color="text.primary">All Doctor</Typography>
+                            <Typography color="text.primary">Chuyên khoa</Typography>
                         </Breadcrumbs>
                     </div>
-                    <div className="all-doctor-container">
+                    <div className="all-specialty-container">
                         <div className="row">
                             <div className="col-lg-4">
 
@@ -217,4 +193,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AllDoctor);
+export default connect(mapStateToProps, mapDispatchToProps)(AllSpecialty);

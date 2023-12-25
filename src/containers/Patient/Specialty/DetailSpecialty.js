@@ -162,8 +162,11 @@ class DetailSpecialty extends Component {
                                     <Link to="/home">
                                         Home
                                     </Link>
+                                    <Link to="/Allspecialty">
+                                        Chuyên khoa
+                                    </Link>
 
-                                    <Typography color="text.primary">Chuyên khoa</Typography>
+                                    <Typography color="text.primary">{dataDetailSpecialty && !_.isEmpty(dataDetailSpecialty) && dataDetailSpecialty.name}</Typography>
                                 </Breadcrumbs>
                                 {dataDetailSpecialty && !_.isEmpty(dataDetailSpecialty)
                                     &&
@@ -183,7 +186,15 @@ class DetailSpecialty extends Component {
                                         Home
                                     </Link>
 
-                                    <Typography color="text.primary">Chuyên khoa</Typography>
+                                    <Link
+                                        underline="hover"
+                                        color="inherit"
+                                        href="#"
+                                    >
+                                        Chuyên khoa
+                                    </Link>
+
+                                    <Typography color="text.primary">{dataDetailSpecialty && !_.isEmpty(dataDetailSpecialty) && dataDetailSpecialty.name}</Typography>
                                 </Breadcrumbs>
                                 {dataDetailSpecialty && !_.isEmpty(dataDetailSpecialty)
                                     &&

@@ -12,13 +12,13 @@ import Login from './Auth/Login';
 import System from '../routes/System';
 import 'react-toastify/dist/ReactToastify.css';
 import detailDoctor from './Patient/Doctor/detailDoctor';
-import { CustomToastCloseButton } from '../components/CustomToast';
 import HomePage from '../containers/HomePage/HomePage';
 import Doctor from '../routes/Doctor';
 import DetailSpecialty from './Patient/Specialty/DetailSpecialty';
 import VerifyEmail from './Patient/VerifyEmail';
 import AllDoctor from './HomePage/Section/AllDoctor';
 import Support from './Patient/Support';
+import AllSpecialty from './HomePage/Section/AllSpecialty';
 
 class App extends Component {
     handlePersistorState = () => {
@@ -57,6 +57,7 @@ class App extends Component {
                                     <Route path={path.VERIFY_EMAIL_BOOKING} component={VerifyEmail} />
                                     <Route path={path.DETAIL_SPECIALTY} component={DetailSpecialty} />
                                     <Route path="/Alldoctor" component={(AllDoctor)} />
+                                    <Route path="/Allspecialty" component={(AllSpecialty)} />
                                     <Route path="/Support" component={(Support)} />
 
                                 </Switch>

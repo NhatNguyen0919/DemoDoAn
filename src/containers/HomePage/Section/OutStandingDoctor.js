@@ -59,7 +59,6 @@ class OutStandingDoctor extends Component {
 
                                 <p>Meet our team</p>
                                 <h3><FormattedMessage id="homepage.out-standing-doctors" /></h3>
-                                <button><FormattedMessage id="homepage.more-info" /></button>
                             </div>
 
                             <div className="section-body1">
@@ -72,7 +71,7 @@ class OutStandingDoctor extends Component {
                                         let nameVi = `${item.positionData.valueVi}, ${item.lastName} ${item.firstName}`;
                                         let nameEn = `${item.positionData.valueEn}, ${item.lastName} ${item.firstName}`;
                                         return (
-                                            <>
+                                            <div key={index}>
                                                 <div className='section-customize1' key={index} onClick={() => this.handleViewDetailDoctor(item)} >
                                                     <div className="outer-bg1">
                                                         <div className='bg-image1 section-outstanding-doctor1'
@@ -84,7 +83,7 @@ class OutStandingDoctor extends Component {
                                                     </div>
 
                                                 </div>
-                                            </>
+                                            </div>
                                         )
                                     })}
 

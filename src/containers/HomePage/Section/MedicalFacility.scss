@@ -1,7 +1,7 @@
-.specialty-wrapper {
-    height: 550px;
-    background: #f5f4f9;
-    padding: 20px 0;
+.clinic-wrapper {
+    height: 600px;
+    background: #ffffff;
+    padding: 50px 0;
 
     .section-container {
         height: 100%;
@@ -9,6 +9,7 @@
         display: block;
         margin: 0 auto;
         position: relative;
+        transition: 0.2s linear ;
 
         .section-header {
             h3 {
@@ -52,6 +53,7 @@
                 overflow: hidden;
 
                 .bg-image {
+                    // background-image: url("https://insmart.com.vn/wp-content/uploads/2021/08/PK-Mediplus.jpg");
                     width: 350px;
                     height: 230px;
                     background-position: center center;
@@ -67,7 +69,8 @@
                     border: 2px solid #ebf2f3;
                     border-radius: 0 0 6px 6px;
                     padding: 30px;
-                    transition: 0.2s linear;
+                    background-color: #fff;
+                    transition: 0.2s linear ;
 
 
                     h4 {
@@ -113,8 +116,8 @@
 
                 &:hover {
                     .custom-text {
-                        background: #ffffff;
-                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                        background: #f5f4f9;
+                        box-shadow: rgba(100, 100, 111, 0.2) 6px 10px 29px 7px;
                     }
                 }
             }

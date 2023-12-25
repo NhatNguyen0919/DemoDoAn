@@ -1,17 +1,46 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Slider from "react-slick";
-import '../HomePage.scss';
+import './MedicalFacility.scss';
 import { FormattedMessage } from 'react-intl';
+import { getAllClinic } from '../../../services/userService';
+import { FaArrowRightLong } from "react-icons/fa6";
+import { withRouter } from 'react-router';
+
+
 
 class MedicalFacility extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataClinic: []
+
+        }
+    }
+
+    async componentDidMount() {
+        let res = await getAllClinic();
+        if (res && res.errorCode === 0) {
+            this.setState({
+                dataClinic: res.data ? res.data : []
+            })
+        }
+    }
+
+    handleViewDetailClinic = (clinic) => {
+        if (this.props.history) {
+            this.props.history.push(`detail-clinic/${clinic.id}`)
+        }
+    }
+
+
 
     render() {
-
+        let { dataClinic } = this.state;
         return (
             <>
                 <div>
-                    <div className='section-wrapper section-medical'>
+                    <div className='clinic-wrapper section-medical'>
                         <div className='section-container'>
                             <div className="section-header">
                                 <h3>Cơ sở y tế nổi bật</h3>
@@ -20,30 +49,26 @@ class MedicalFacility extends Component {
 
                             <div className="section-body">
                                 <Slider {...this.props.settings}>
-                                    <div className='section-customize'>
-                                        <div className='bg-image section-medical' />
-                                        <div className='custom-text'>Bệnh viện Hữu nghị Việt Đức 1 </div>
-                                    </div>
-                                    <div className='section-customize'>
-                                        <div className='bg-image section-medical' />
-                                        <div className='custom-text'>Bệnh viện Hữu nghị Việt Đức 2 </div>
-                                    </div>
-                                    <div className='section-customize'>
-                                        <div className='bg-image section-medical' />
-                                        <div className='custom-text'>Bệnh viện Hữu nghị Việt Đức 3 </div>
-                                    </div>
-                                    <div className='section-customize'>
-                                        <div className='bg-image section-medical' />
-                                        <div className='custom-text'>Bệnh viện Hữu nghị Việt Đức 4 </div>
-                                    </div>
-                                    <div className='section-customize'>
-                                        <div className='bg-image section-medical' />
-                                        <div className='custom-text'>Bệnh viện Hữu nghị Việt Đức 5 </div>
-                                    </div>
-                                    <div className='section-customize'>
-                                        <div className='bg-image section-medical' />
-                                        <div className='custom-text'>Bệnh viện Hữu nghị Việt Đức 6 </div>
-                                    </div>
+                                    {dataClinic && dataClinic.length > 0 &&
+                                        dataClinic.map((item, index) => {
+                                            return (
+                                                <div className='section-customize' key={index}
+                                                    onClick={() => this.handleViewDetailClinic(item)}
+                                                >
+                                                    <div className='bg-image section-medical'
+                                                        style={{ backgroundImage: `url(${item.image})` }}
+                                                    />
+                                                    <div className='custom-text'>
+                                                        <h4>{item.name}</h4>
+                                                        <div className='readmore'>Readmore <i><FaArrowRightLong /></i> </div>
+                                                    </div>
+                                                </div>
+                                            )
+                                        })
+
+                                    }
+
+
                                 </Slider>
                             </div>
 
@@ -68,4 +93,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MedicalFacility);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MedicalFacility));

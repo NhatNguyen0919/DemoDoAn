@@ -43,8 +43,8 @@
         background: #005963 !important;
     }
 
-    .all-doctor-container {
-        .single-doctor {
+    .all-specialty-container {
+        .single-specialty {
             width: 700px;
             border: 1px solid #e3e4e4;
             display: flex;
@@ -56,15 +56,15 @@
 
 
             .left {
-                width: 40%;
+                width: 50%;
                 overflow: hidden;
 
 
                 img {
-                    border-radius: 5px;
-
                     height: 100%;
-                    width: 100%;
+                    width: 97%;
+                    border-top-left-radius: 15px;
+                    border-bottom-left-radius: 15px;
                     background-position: center center;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -86,7 +86,7 @@
 
             .right {
                 padding: 30px;
-                width: 60%;
+                width: 50%;
 
                 h4 {
                     font-weight: 600;
@@ -97,8 +97,13 @@
 
                 div {
                     color: #005963;
-                    font-weight: 500;
-                    font-size: 14px;
+                    text-align: center;
+                    margin-bottom: 20px;
+
+                    h3 {
+                        font-weight: 600;
+
+                    }
                 }
 
                 p {
@@ -111,13 +116,7 @@
                     overflow: hidden;
                 }
 
-                .location{
-                    margin-top: 5px;
-                }
-
-                .wrap-button{
-                    
-                }
+                .wrap-button {}
 
                 button {
                     cursor: pointer;

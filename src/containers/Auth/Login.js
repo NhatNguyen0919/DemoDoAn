@@ -6,7 +6,6 @@ import './Login.scss';
 import { GrFacebook, GrInstagram, GrGithub, GrGoogle } from "react-icons/gr";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { handleLogin } from '../../services/userService';
-import { withRouter } from 'react-router';
 import { FormattedMessage } from 'react-intl';
 
 

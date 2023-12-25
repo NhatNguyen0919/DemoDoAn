@@ -48,7 +48,7 @@ const getAllDetailInfoDoctors = (id) => {
 }
 
 const saveBulkScheduleDoctor = (data) => {
-    return axios.post(`/api/bulk-create-schedule`, data)
+    return axios.post(`/api/bulk-create-schedule`, data);
 }
 
 
@@ -65,15 +65,15 @@ const getProfileDoctorById = (id) => {
 }
 
 const postPatientAppointment = (data) => {
-    return axios.post(`/api/patient-booking`, data)
+    return axios.post(`/api/patient-booking`, data);
 }
 
 const postVerifyBooking = (data) => {
-    return axios.post(`/api/verify-booking`, data)
+    return axios.post(`/api/verify-booking`, data);
 }
 
 const createNewSpecialty = (data) => {
-    return axios.post(`/api/create-specialty`, data)
+    return axios.post(`/api/create-specialty`, data);
 }
 
 const getAllSpecialty = () => {
@@ -81,28 +81,28 @@ const getAllSpecialty = () => {
 }
 
 const getDayBooking = (token) => {
-    return axios.get(`/api/get-day-booking?token=${token}`)
+    return axios.get(`/api/get-day-booking?token=${token}`);
 }
 
 const getAllDetailSpecialty = (data) => {
     return axios.get(`/api/get-detail-specialty?id=${data.id}&location=${data.location}`);
 }
 
+const createNewClinic = (data) => {
+    return axios.post(`/api/create-clinic`, data);
+}
+
+const getAllClinic = () => {
+    return axios.get(`/api/get-clinic`);
+}
+
 
 export {
-    handleLogin,
-    getAllUsers,
-    createNewUserService,
-    deleteUSerService,
-    editUserService,
-    getAllCodeService,
+    handleLogin, getAllUsers, createNewUserService,
+    deleteUSerService, editUserService, getAllCodeService,
     getTopDoctorHomeService,
-    getAllDoctors,
-    saveDetailDoctorsService,
-    getDetailInfoDoctors,
-    saveBulkScheduleDoctor,
-    getScheduleDoctorByDate,
-    getExtraInforDoctorById,
+    getAllDoctors, saveDetailDoctorsService, getDetailInfoDoctors,
+    saveBulkScheduleDoctor, getScheduleDoctorByDate, getExtraInforDoctorById,
     getProfileDoctorById,
     postPatientAppointment,
     createNewSpecialty,
@@ -110,6 +110,7 @@ export {
     getAllDetailInfoDoctors,
     getAllSpecialty,
     getDayBooking,
-    getAllDetailSpecialty
+    getAllDetailSpecialty, createNewClinic,
+    getAllClinic
 }
 

@@ -6,6 +6,7 @@ import { FormattedMessage } from 'react-intl';
 import { getAllSpecialty } from '../../../services/userService';
 import { withRouter } from 'react-router';
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 
 
@@ -37,22 +38,26 @@ class Specialty extends Component {
 
     handleViewDetailSpecialty = (item) => {
         if (this.props.history) {
-            
+
             this.props.history.push(`detail-specialty/${item.id}`)
         }
     }
 
 
+
+
+
+
+
     render() {
         let { dataSpecialty } = this.state;
-        console.log("check state", dataSpecialty);
         return (
             <div>
                 <div className='specialty-wrapper '>
                     <div className='section-container'>
                         <div className="section-header">
                             <h3>Chuyên khoa phổ biến</h3>
-                            <button>Xem thêm</button>
+                            <button className='more-info'><Link to="/Allspecialty" ><b><FormattedMessage id="homepage.more-info" /></b></Link></button>
                         </div>
 
                         <div className="section-body">

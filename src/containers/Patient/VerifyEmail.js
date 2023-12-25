@@ -130,7 +130,6 @@ class VerifyEmail extends Component {
 
     render() {
         let { statusVerify, errorCode, dayBooking, doctorInfor } = this.state;
-        console.log("hoidanit check state",this.state);
         return (
             <>
                 <HomeHeader />
