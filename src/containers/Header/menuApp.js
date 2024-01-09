@@ -3,7 +3,7 @@ export const adminMenu = [
         name: 'menu.admin.user-manage',
         menus: [
             {
-                name: 'menu.admin.crud', link: '/system/user-manage'
+                name: 'menu.admin.crud', link: '/system/home'
 
             },
             {
@@ -65,9 +65,18 @@ export const doctorMenu = [
     {
         name: 'menu.admin.user-manage',
         menus: [
+            {
+                name: 'menu.admin.crud', link: '/system/home'
+
+            },
             { //quản lý kế hoạch bác sĩ
 
                 name: 'menu.doctor.manage-schedule', link: '/doctor/schedul-manage'
+
+            },
+            { //quản lý bệnh nhân
+
+                name: 'menu.doctor.manage-patient', link: '/doctor/patient-manage'
 
             },
         ]

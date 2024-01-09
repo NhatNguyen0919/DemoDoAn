@@ -121,3 +121,109 @@
         }
     }
 }
+
+
+@media screen and (max-width:1210px) {
+    .specialty-wrapper {
+        height: 450px;
+
+        .section-container {
+            width: 90%;
+
+            .section-body {
+                margin-top: 50px;
+
+                .section-customize {
+                    overflow: hidden;
+                    width: auto !important;
+
+                    .bg-image {
+                        width: 220px;
+                        height: 150px;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 6px 6px 0 0;
+
+                    }
+
+                    .custom-text {
+                        width: 220px;
+                        height: 150px;
+                        border: 2px solid #ebf2f3;
+                        border-radius: 0 0 6px 6px;
+                        padding: 30px;
+                        transition: 0.2s linear;
+
+
+                        h4 {
+                            color: #005963;
+                            font-size: 20px;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: #02717e;
+
+                            }
+
+                        }
+
+                        .readmore {
+                            margin-top: 20px;
+                            display: flex;
+                            align-items: center;
+                            color: #00acb1;
+                            font-size: 16px;
+                            font-weight: bold;
+                            cursor: pointer;
+
+
+                            i {
+                                margin-left: 5px;
+                                transition: 0.2s linear;
+                            }
+
+                            &:hover {
+                                color: #005963;
+
+                                i {
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+
+                    }
+
+
+                    &:hover {
+                        .custom-text {
+                            background: #ffffff;
+                            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:640px) {
+    .specialty-wrapper {
+        padding: 30px 0;
+
+        .section-container {
+            .section-body {
+                .section-wrap {
+                    .section-customize {
+                        margin-left: 60px;
+                    }
+                }
+            }
+        }
+
+    }
+
+}

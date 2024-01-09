@@ -36,3 +36,32 @@
         }
     }
 }
+
+@media screen and (max-width:1040px) {
+    .contain {
+        .counter-container {
+            width: 80%;
+        }
+    }
+
+}
+
+@media screen and (max-width:640px) {
+    .contain {
+        .counter-container {
+            width: 90%;
+            height: 100%;
+            padding: 50px 25px;
+
+            .counter-div {
+                margin: 20px 0;
+
+                .counter-span {
+
+                }
+
+            }
+        }
+    }
+
+}

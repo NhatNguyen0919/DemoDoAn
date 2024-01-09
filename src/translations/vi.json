@@ -35,6 +35,22 @@
         "support-cus": "Dịch Vụ Hỗ Trợ và Tư Vấn",
         "support-rs": "Caremed cung cấp dịch vụ hỗ trợ và tư vấn cho bệnh nhân, giúp họ và gia đình có thông tin và hỗ trợ cần thiết."
     },
+    "counter": {
+        "customer": "Khách hàng hài lòng",
+        "project": "Dự án đã hoàn thành",
+        "customer-work": "Dự án khách hàng"
+    },
+    "step": {
+        "we-do": "Chúng tôi làm gì",
+        "our-services": "Dịch vụ của chúng tôi",
+        "process": "Các bước",
+        "searchdoctor": "Tìm kiếm Bác sĩ",
+        "reason-seacth": "Tìm kiếm và kết nối với những Chuyên gia Trực tuyến hàng đầu.",
+        "appointments": "Đặt hẹn ngay lập tức",
+        "reason-appointment": "Khám phá sự thuận tiện và linh hoạt, và bắt đầu hành trình của bạn",
+        "your-feedback": "Để lại ý kiến của bạn",
+        "reason-feedback": " Hãy để lại phản hồi của bạn để chúng tôi có cơ hội cải thiện dịch vụ "
+    },
     "menu": {
         "admin": {
             "user-manage": "Quản lý người sử dụng",
@@ -50,7 +66,8 @@
             "handbook-manage": "Quản lý cẩm nang"
         },
         "doctor": {
-            "manage-schedule": "Quản lý kế hoạch"
+            "manage-schedule": "Quản lý kế hoạch",
+            "manage-patient": "Quản lý bệnh nhân"
         }
     },
     "manage-users": {
@@ -118,7 +135,12 @@
             "addressClinic": "Địa chỉ phòng khám",
             "note": "Ghi chú",
             "specialty": "Chuyên Khoa",
-            "clinic":"Phòng khám"
+            "clinic": "Phòng khám"
         }
+    },
+    "footer": {
+        "address": "Địa chỉ Liên hệ",
+        "detail-address": "TP.HCM",
+        "call": "Số điện thoại"
     }
 }

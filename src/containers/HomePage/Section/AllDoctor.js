@@ -105,7 +105,7 @@ class AllDoctor extends Component {
                                     if (content.Markdown) {
                                         return (
                                             <div key={index}>
-                                                <div key={num}>Chuyên khoa: {specialtyName}</div>
+                                                <div key={num}><FormattedMessage id="homeheader.speciality" /> : {specialtyName}</div>
                                                 <div className='location'><i><FaLocationDot /></i> {language === LANGUAGES.VI ? provinceNameVi : provinceNameEn}</div>
                                                 <p>{content.Markdown.description}</p>
                                             </div>
@@ -113,8 +113,8 @@ class AllDoctor extends Component {
                                     } else {
                                         return (
                                             <div key={index}>
-                                                <div key={num}>Chuyên khoa</div>
-                                                <div >Chuyên khoa</div>
+                                                <div key={num}><FormattedMessage id="homeheader.speciality" /></div>
+                                                <div ><FormattedMessage id="homeheader.speciality" /></div>
                                                 <p>Fail to compile</p>
                                             </div>
 
@@ -126,7 +126,7 @@ class AllDoctor extends Component {
                             })}
                             <div className="wrap-button">
                                 <button onClick={() => this.handleViewDetailDoctor(item)}>
-                                    View More
+                                    <FormattedMessage id="homepage.more-info" />
                                 </button>
                                 <button onClick={() => this.handleHeart()}>
 
@@ -166,13 +166,13 @@ class AllDoctor extends Component {
                 <div className="all-doctor-body">
                     <div className="all-doctor-title">
                         <h2>Doctor List</h2>
-                        <Breadcrumbs aria-label="breadcrumb">
+                        <Breadcrumbs aria-label="breadcrumb" className='bread-scrumb'>
                             <Link to="/home">
-                                Home
+                                <FormattedMessage id="homeheader.home" />
                             </Link>
 
 
-                            <Typography color="text.primary">All Doctor</Typography>
+                            <Typography color="text.primary"><FormattedMessage id="homeheader.doctors" /></Typography>
                         </Breadcrumbs>
                     </div>
                     <div className="all-doctor-container">
@@ -181,7 +181,7 @@ class AllDoctor extends Component {
 
                             </div>
 
-                            <div className="col-lg-8">
+                            <div className="col-lg-8 content-doctor-wrap">
                                 <ul>
                                     {arrRender}
                                 </ul>

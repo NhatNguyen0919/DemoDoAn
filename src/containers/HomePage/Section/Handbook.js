@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Slider from "react-slick";
 import '../HomePage.scss';
 import "./HandBook.scss";
 
@@ -19,7 +18,7 @@ class HandBook extends Component {
         return (
             <>
                 <div>
-                    <div className='section-wrapper section-handbook1'>
+                    {/* <div className='section-wrapper section-handbook1'>
                         <div className='section-container'>
                             <div className="section-header">
                                 <h3>Cẩm nang</h3>
@@ -53,7 +52,7 @@ class HandBook extends Component {
                             </div>
 
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
             </>

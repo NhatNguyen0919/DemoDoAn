@@ -41,6 +41,7 @@ class Header extends Component {
     }
     render() {
         const { processLogout, userInfo } = this.props;
+        let role = userInfo.roleId;
 
 
         return (
@@ -51,7 +52,7 @@ class Header extends Component {
                     <div className='menu-language'>
                         <div className='admin-contain'>
                             <span>
-                                <h4>Admin</h4>
+                                <h4>{role === USER_ROLES.DOCTOR ? "Bác sĩ" : "Admin"}</h4>
                                 <div className='admin-icon'>
                                     <i><FaUserTie /></i>
                                 </div>

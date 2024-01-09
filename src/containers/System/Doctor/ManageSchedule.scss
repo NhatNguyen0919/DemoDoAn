@@ -51,17 +51,25 @@
             border-radius: 8px;
             font-size: 17px;
             font-weight: 500;
-            color: #000000;
+            color: #212121;
             text-shadow: none;
-            background: rgb(255, 255, 255);
+            background: transparent;
             box-shadow: transparent;
-            border: 1px solid #ffffff80;
+            border: 1px solid #212121;
             transition: 0.5s ease;
             user-select: none;
-            border: 1px solid #000000;
+
 
             &.active {
-                background-color: rgb(218, 181, 15);
+                color: #ffffff;
+                background: #202938;
+                border: 1px solid #202938;
+                text-shadow: 0 0 5px #ffffff,
+                    0 0 5px #ffffff;
+                   
+                box-shadow: 0 0 5px #202938,
+                    0 0 10px #202938;
+                   
             }
 
         }

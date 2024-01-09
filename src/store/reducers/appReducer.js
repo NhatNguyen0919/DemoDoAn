@@ -10,7 +10,7 @@ const initContentOfConfirmModal = {
 const initialState = {
     started: true,
     language: 'en',
-    systemMenuPath: '/system/user-manage',
+    systemMenuPath: '/system/home',
     contentOfConfirmModal: {
         ...initContentOfConfirmModal
     }
@@ -32,10 +32,10 @@ const appReducer = (state = initialState, action) => {
                 }
             }
         case actionTypes.CHANGE_LANGUAGE:
-            console.log("check log:",action);
+            console.log("check log:", action);
             return {
                 ...state,
-                language:action.language,
+                language: action.language,
 
             }
         default:

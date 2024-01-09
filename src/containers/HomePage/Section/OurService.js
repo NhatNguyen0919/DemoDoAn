@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import './OurService.scss';
-import { LANGUAGES } from "../../../utils"
 import { FormattedMessage } from 'react-intl';
 import { BsFillSearchHeartFill } from "react-icons/bs";
 import { VscFeedback } from "react-icons/vsc";
@@ -33,14 +31,16 @@ class OurService extends Component {
             <>
                 <div className='service-container'>
                     <div className='service-section'>
-                        <span>What We do</span>
-                        <h3>Our Services</h3>
-                        <span>Work Process</span>
+                        <span><FormattedMessage id="step.we-do" /></span>
+                        <h3>
+                            <FormattedMessage id="step.our-services" />
+                        </h3>
+                        <span><FormattedMessage id="step.process" /></span>
                     </div>
                     <div className="service-process-container">
                         <div className="row service-process-wrap">
 
-                            <div className="col-lg-4 col-md-6">
+                            <div className="col-lg-4 col-md-6 service-div">
                                 <div className='service-process-info'>
                                     <div className='service-process-header'>
                                         <span>
@@ -49,16 +49,15 @@ class OurService extends Component {
                                     </div>
                                     <div className='service-process-description'>
                                         <h4>
-                                            Search Best Online
-                                            Professional
+                                            <FormattedMessage id="step.searchdoctor" />
                                         </h4>
-                                        <p>It is a long established fact that a reader will be distracted by the readable.</p>
+                                        <p><FormattedMessage id="step.reason-seacth" /></p>
                                         <span className='steps'>Step 1</span>
                                         <span className='pulsive-dots'></span>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-md-6">
+                            <div className="col-lg-4 col-md-6 service-div">
                                 <div className='service-process-info'>
                                     <div className='service-process-header'>
                                         <span>
@@ -67,17 +66,16 @@ class OurService extends Component {
                                     </div>
                                     <div className='service-process-description'>
                                         <h4>
-                                            Get Instant
-                                            Appointment
+                                            <FormattedMessage id="step.appointments" />
                                         </h4>
-                                        <p>It is a long established fact that a reader will be distracted by the readable.</p>
+                                        <p><FormattedMessage id="step.reason-appointment" /></p>
                                         <span className='steps'>Step 2</span>
                                         <span className='pulsive-dots'></span>
                                     </div>
                                 </div>
 
                             </div>
-                            <div className="col-lg-4 col-md-6">
+                            <div className="col-lg-4 col-md-6 service-div">
                                 <div className='service-process-info'>
                                     <div className='service-process-header'>
                                         <span>
@@ -86,11 +84,11 @@ class OurService extends Component {
                                     </div>
                                     <div className='service-process-description'>
                                         <h4>
-                                            Leave Your
-                                            <br />
-                                            Feedback
+                                            <FormattedMessage id="step.your-feedback" />
                                         </h4>
-                                        <p>It is a long established fact that a reader will be distracted by the readable.</p>
+                                        <p>
+                                            <FormattedMessage id="step.reason-feedback" />
+                                        </p>
                                         <span className='steps'>Step 3</span>
                                         <span className='pulsive-dots'></span>
                                     </div>

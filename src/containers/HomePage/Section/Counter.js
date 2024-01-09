@@ -5,6 +5,7 @@ import _throttle from 'lodash/throttle';
 import { connect } from 'react-redux';
 import './WhyChoose.scss';
 import CountUp from 'react-countup';
+import { FormattedMessage } from 'react-intl';
 
 
 
@@ -18,7 +19,7 @@ class Specialty extends Component {
                 <div className='row counter-container'>
                     <Suspense fallback={<div>Loading...</div>}>
 
-                        <div className='col-lg-3 col-md-4 col-sm-6' style={{ textAlign: "center" }}>
+                        <div className='col-lg-3 col-md-4 col-sm-6 counter-div' style={{ textAlign: "center" }}>
                             <span className='counter-span'>
                                 <h1>
                                     <CountUp
@@ -36,13 +37,13 @@ class Specialty extends Component {
                                 </h1>
                                 <span className="plus">+</span>
                             </span>
-                            <p className="text-white" style={{ fontWeight: "Bold" }}>Happy Customers</p>
+                            <p className="text-white" style={{ fontWeight: "Bold" }}><FormattedMessage id="counter.customer" /></p>
                         </div>
-                        <div className='col-lg-3 col-md-4 col-sm-6' style={{ textAlign: "center" }}>
+                        <div className='col-lg-3 col-md-4 col-sm-6 counter-div' style={{ textAlign: "center" }}>
                             <span className='counter-span'>
                                 <h1>
                                     <CountUp
-                                        end={200}
+                                        end={500}
                                         duration={5}
                                         delay={0}
                                     >
@@ -55,13 +56,13 @@ class Specialty extends Component {
                                 </h1>
                                 <span className="plus">+</span>
                             </span>
-                            <p className="text-white" style={{ fontWeight: "Bold" }}>Project Done</p>
-                        </div><div className='col-lg-3 col-md-4 col-sm-6' style={{ textAlign: "center" }}>
+                            <p className="text-white" style={{ fontWeight: "Bold" }}><FormattedMessage id="counter.project" /></p>
+                        </div><div className='col-lg-3 col-md-4 col-sm-6 counter-div' style={{ textAlign: "center" }}>
                             <span className='counter-span'>
                                 <h1>
                                     <CountUp
 
-                                        end={300}
+                                        end={678}
                                         duration={5}
                                         delay={0}
                                     >
@@ -74,7 +75,7 @@ class Specialty extends Component {
                                 </h1>
                                 <span className="plus">+</span>
                             </span>
-                            <p className="text-white" style={{ fontWeight: "Bold" }}>Clients Work</p>
+                            <p className="text-white" style={{ fontWeight: "Bold" }}><FormattedMessage id="counter.customer-work" /></p>
                         </div>
                     </Suspense>
                 </div>

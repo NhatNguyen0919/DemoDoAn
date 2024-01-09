@@ -97,45 +97,11 @@ class ManageSpecialty extends Component {
         return result;
     }
 
-    // handleChangeSelect = async (selectedOption) => {
-    //     this.setState({ selectedOption })
-    //     let { listSpecialty } = this.state
-    //     console.log("check selection", this.state);
 
-    //     let res = await getAllDetailSpecialty(selectedOption.value)
-    //     if (res && res.errorCode === 0 && res.data && res.data.Markdown) {
-    //         let markdown = res.data.Markdown;
-    //         let name = res.data.name
-    //         let specialtyId = '', selectedSpecialty = ''
-
-    //         this.setState({
-    //             name: name,
-    //             imageBase64: "",
-    //             descriptionMarkdown: markdown,
-    //             selectedSpecialty: '',
-
-    //         })
-
-    //     }
-    //     else {
-    //         this.setState({
-    //             contentHTML: '',
-    //             contentMarkdown: '',
-    //             description: '',
-    //             hasOldData: false,
-    //             addressClinic: '',
-    //             nameClinic: '',
-    //             note: ''
-    //         })
-    //     }
-
-    // };
 
     handleChangeSelectDoctorInfor = async (selectedOption, name) => {
         let stateName = name.name;
         let coppyState = { ...this.state };
-        let { listSpecialty } = this.state
-        console.log("check", this.state);
 
         coppyState[stateName] = selectedOption;
         let res = await getAllDetailSpecialty({
@@ -172,7 +138,6 @@ class ManageSpecialty extends Component {
             this.setState({
                 imageBase64: base64
             })
-            console.log("base 64", this.state.avatar);
         }
 
     }
@@ -187,7 +152,6 @@ class ManageSpecialty extends Component {
 
     handleSaveSpecialty = async () => {
         let { hasOldData } = this.state;
-        console.log("check selection", this.state);
 
         let res = await createNewSpecialty(this.state);
         if (res && res.errorCode === 0) {
@@ -210,7 +174,7 @@ class ManageSpecialty extends Component {
 
 
     render() {
-        let { listSpecialty, name, imageBase64 } = this.state;
+        let { listSpecialty,  imageBase64 } = this.state;
         return (
             <>
                 <div className='manage-specialty-container'>
@@ -239,7 +203,7 @@ class ManageSpecialty extends Component {
                                     value={this.state.selectedSpecialty}
                                     onChange={this.handleChangeSelectDoctorInfor}
                                     options={listSpecialty}
-                                    placeholder={name}
+                                    placeholder={"Chuyên khoa"}
                                 />
                             </div>
 

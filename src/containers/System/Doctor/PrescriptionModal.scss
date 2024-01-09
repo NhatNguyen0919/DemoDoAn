@@ -1,0 +1,17 @@
+.booking-modal-header {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+
+    .left {
+        font-weight: 400;
+        color: #333;
+        font-size: 20px;
+        opacity: 0.7;
+    }
+
+    .right {
+        font-size: 18px;
+        float: right;
+        cursor: pointer;
+    }
+}

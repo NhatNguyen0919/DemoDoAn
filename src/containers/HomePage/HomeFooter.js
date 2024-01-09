@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import './HomeFooter.scss';
 import { FaPhone, FaLocationArrow } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { FormattedMessage } from 'react-intl';
 
 
 
@@ -25,8 +26,8 @@ class HomeFooter extends Component {
                                     </span>
                                 </div>
                                 <div className="footer-description">
-                                    <p className='first-des'>Our Address</p>
-                                    <p className='second-des'>Ho Chi Minh City</p>
+                                    <p className='first-des'><FormattedMessage id="footer.address" /></p>
+                                    <p className='second-des'><FormattedMessage id="footer.detail-address" /></p>
                                 </div>
                             </div>
                             <div className="footer-infor" style={{ borderLeft: "2px solid", borderLeftColor: "rgb(228 235 236)", paddingLeft: "70px" }}>
@@ -36,7 +37,7 @@ class HomeFooter extends Component {
                                     </span>
                                 </div>
                                 <div className="footer-description">
-                                    <p className='first-des'>Call us</p>
+                                    <p className='first-des'><FormattedMessage id="footer.call" /></p>
                                     <p className='second-des'>0123456789</p>
                                 </div>
                             </div>
@@ -47,7 +48,7 @@ class HomeFooter extends Component {
                                     </span>
                                 </div>
                                 <div className="footer-description">
-                                    <p className='first-des'>Our Mail</p>
+                                    <p className='first-des'>Email</p>
                                     <p className='second-des'>nhatnha20@uef.edu.vn</p>
                                 </div>
                             </div>

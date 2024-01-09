@@ -9,7 +9,7 @@
         display: block;
         margin: 0 auto;
         position: relative;
-        transition: 0.2s linear ;
+        transition: 0.2s linear;
 
         .section-header {
             h3 {
@@ -70,7 +70,7 @@
                     border-radius: 0 0 6px 6px;
                     padding: 30px;
                     background-color: #fff;
-                    transition: 0.2s linear ;
+                    transition: 0.2s linear;
 
 
                     h4 {
@@ -119,6 +119,51 @@
                         background: #f5f4f9;
                         box-shadow: rgba(100, 100, 111, 0.2) 6px 10px 29px 7px;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1210px) {
+    .clinic-wrapper {
+        height: 500px;
+
+        .section-container {
+            width: 90%;
+
+            .section-body {
+
+                .section-customize {
+                    width: auto !important;
+
+                    .bg-image {
+                        width: 220px;
+                        height: 150px;
+
+                    }
+
+                    .custom-text {
+                        width: 220px;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:640px) {
+    .clinic-wrapper {
+
+        .section-container {
+
+            .section-body {
+
+                .section-customize {
+                    margin-left: 60px;
+
+
                 }
             }
         }

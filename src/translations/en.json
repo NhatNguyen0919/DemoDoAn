@@ -35,6 +35,22 @@
         "support-cus": "Support Services and Counseling",
         "support-rs": "Caremed provides support services and counseling for patients, offering them and their families the necessary information and assistance."
     },
+    "counter": {
+        "customer": "Happy customers",
+        "project": "Project Done",
+        "customer-work": "Client Work"
+    },
+    "step": {
+        "we-do": "What We do",
+        "our-services": "Our Services",
+        "process": "Work Process",
+        "searchdoctor": "Search Best Online Professional",
+        "reason-seacth": "Search and connect with top online professionals.",
+        "appointments": "Get Instant Appointment",
+        "reason-appointment": "Explore the convenience and flexibility, and begin your journey.",
+        "your-feedback": "Leave your feedback",
+        "reason-feedback": "Leave your feedback to give us the opportunity to enhance our services."
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",
@@ -76,7 +92,8 @@
             "handbook-manage": "Manage handbook"
         },
         "doctor": {
-            "manage-schedule": "Manage doctor schedule"
+            "manage-schedule": "Manage doctor schedule",
+            "manage-patient": "Manage patients"
         }
     },
     "manage-users": {
@@ -146,5 +163,11 @@
             "specialty": "Medical specialty",
             "clinic": "Clinics"
         }
+    },
+    "footer": {
+        "address": "Our Address",
+        "detail-address": "Ho Chi Minh City",
+        "call":"Call us"
+
     }
 }

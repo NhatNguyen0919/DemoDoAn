@@ -38,8 +38,13 @@ class Specialty extends Component {
 
     handleViewDetailSpecialty = (item) => {
         if (this.props.history) {
-
             this.props.history.push(`detail-specialty/${item.id}`)
+        }
+    }
+
+    handleViewAll = (item) => {
+        if (this.props.history) {
+            this.props.history.push(`/Allspecialty"`)
         }
     }
 
@@ -47,22 +52,26 @@ class Specialty extends Component {
 
 
 
-
-
     render() {
         let { dataSpecialty } = this.state;
+        let { settings } = this.props;
         return (
             <div>
                 <div className='specialty-wrapper '>
                     <div className='section-container'>
                         <div className="section-header">
-                            <h3>Chuyên khoa phổ biến</h3>
-                            <button className='more-info'><Link to="/Allspecialty" ><b><FormattedMessage id="homepage.more-info" /></b></Link></button>
+                            <h3><FormattedMessage id="homeheader.speciality" /></h3>
+                            <Link to="/Allspecialty" >
+                                <button className='more-info'>
+                                    <b><FormattedMessage id="homepage.more-info" /></b>
+                                </button>
+                            </Link>
+
                         </div>
 
                         <div className="section-body">
-                            <div className="row">
-                                <Slider {...this.props.settings}>
+                            <div className="row section-wrap">
+                                <Slider {...settings}>
                                     {dataSpecialty && dataSpecialty.length > 0 &&
                                         dataSpecialty.map((item, index) => {
                                             return (
@@ -74,7 +83,7 @@ class Specialty extends Component {
                                                     />
                                                     <div className='custom-text'>
                                                         <h4>{item.name}</h4>
-                                                        <div className='readmore'>Readmore <i><FaArrowRightLong /></i> </div>
+                                                        <div className='readmore'><FormattedMessage id="homepage.more-info" /> <i><FaArrowRightLong /></i> </div>
                                                     </div>
 
                                                 </div>

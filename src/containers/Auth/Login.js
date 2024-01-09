@@ -6,7 +6,6 @@ import './Login.scss';
 import { GrFacebook, GrInstagram, GrGithub, GrGoogle } from "react-icons/gr";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { handleLogin } from '../../services/userService';
-import { FormattedMessage } from 'react-intl';
 
 
 class Login extends Component {
@@ -64,10 +63,7 @@ class Login extends Component {
     }
 
 
-    returnRegister = () => {
-        this.props.history.push('/login');
 
-    }
 
 
     handleShowHidePass = () => {

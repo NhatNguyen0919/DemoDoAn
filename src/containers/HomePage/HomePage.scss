@@ -53,10 +53,10 @@
 
                  }
 
-                //  &.section-medical {
-                //      background-image: url("https://cdn.bookingcare.vn/fr/w500/2018/06/18/083122lo-go-viet-duc.jpg");
+                 //  &.section-medical {
+                 //      background-image: url("https://cdn.bookingcare.vn/fr/w500/2018/06/18/083122lo-go-viet-duc.jpg");
 
-                //  }
+                 //  }
 
                  &.section-outstanding-doctor {
                      //  background-image: url("");
@@ -225,18 +225,135 @@
          }
 
          .right-content {
-             width: 40%;
+             width: 50%;
              display: flex;
-             align-items: center;
              padding: 0 50px;
+             flex-direction: column;
+             flex-wrap: wrap;
 
-             p {
-                 font-size: 20px;
-                 font-style: italic;
+             .right-wrap {
+                 height: 100%;
+                 display: flex;
+                 justify-content: space-between;
+                 flex-direction: column;
+                 padding: 50px 60px 20px;
+                 box-shadow: 0 0 10px 10px rgba(0, 0, 0, .03);
+                 background-color: #fff;
+                 overflow: hidden;
+
+                 .right-item {
+                     margin-bottom: 30px;
+                     padding: 5px;
+
+                     i {
+                         padding: 5px;
+                         color: #005963;
+                         margin-right: 10px;
+                     }
+
+
+
+                 }
              }
+
+
          }
 
 
+     }
+ }
+
+
+ @media screen and (max-width:1040px) {
+     .section-wrapper {
+         &.section-specialty {
+             background: #f5f4f9;
+
+         }
+
+         &.section-about {
+             height: 600px !important;
+             padding: 0;
+             background: #fff;
+
+         }
+     }
+
+     .section-about {
+
+
+         .section-about-content {
+             display: flex;
+             gap: 25px;
+             width: 100%;
+
+             .left-content {
+                 width: 50%;
+
+                 iframe {}
+             }
+
+             .right-content {
+                 width: 40%;
+                 display: flex;
+                 padding: 0 0px;
+                 flex-direction: column;
+                 flex-wrap: wrap;
+
+                 .right-wrap {
+                     padding: 0;
+                     height: 100%;
+                     display: flex;
+                     justify-content: space-between;
+                     flex-direction: column;
+
+                     .right-item {
+                         font-size: 20px;
+                         font-weight: 600;
+
+                         i {
+                             padding: 5px;
+                             color: #005963;
+                             margin-right: 10px;
+                         }
+
+
+
+                     }
+                 }
+
+
+             }
+
+
+         }
+     }
+
+ }
+
+ @media screen and (max-width:640px) {
+     .section-wrapper {
+         margin-bottom: 500px;
+
+         .section-about-content {
+             display: flex;
+             flex-direction: column;
+
+             .left-content {
+                 width: 100%;
+
+                 iframe {}
+             }
+
+             .right-content {
+                width: 100%;
+                 .right-wrap {
+                     .right-item {
+                         text-align: center;
+                     }
+                 }
+             }
+         }
      }
  }
 

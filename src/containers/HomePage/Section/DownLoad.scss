@@ -73,3 +73,79 @@
 
     }
 }
+
+@media screen and (max-width:640px) {
+    .wrapper-content {
+        .container {
+            padding: 30px 0 0 0!important;
+            .left-content {
+                width: 30%;
+                margin: 0 8px;
+
+                .app-img {
+                    background-size: 100px auto;
+                }
+            }
+
+            .right-content {
+                h2 {
+                    font-size: 24px;
+                }
+
+                ul {
+                    padding: 0;
+
+                    li {
+                        font-size: 13px;
+                    }
+                }
+
+                .app-link {
+                    flex-direction: column;
+
+                    .ios {
+                        width: 100%;
+                        background-size: 125px auto;
+                        height: 50px;
+                    }
+
+                    .android {
+                        width: 100%;
+                        background-size: 125px auto;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+@media screen and (max-width:1040px) {
+    .wrapper-content {
+        height: auto;
+
+        .container {
+            padding: 95px 0px ;
+
+            .left-content {
+                width: 30%;
+
+            }
+
+            .right-content {
+
+                .app-link {
+                    .ios {
+                        background-size: 125px auto;
+                    }
+
+                    .android {
+                        background-size: 125px auto;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -182,7 +182,6 @@ class BookingModal extends Component {
         if (dataScheduleModal && !_.isEmpty(dataScheduleModal)) {
             doctorId = dataScheduleModal.doctorId
         }
-        console.log("check data : ", dataScheduleModal);
 
         // fullName: '',
         //     phoneNumber: '',

@@ -1,12 +1,12 @@
-.all-doctor-body {
+.all-clinic-body {
     background-color: #f5f4f9;
 
 
-    .all-doctor-title {
+    .all-clinic-title {
         padding: 50px;
         display: flex;
         justify-content: center;
-        background: url("https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?q=80&w=1983&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background: url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -40,6 +40,7 @@
         p {
             font-weight: 500;
             color: #25b7bd;
+
         }
     }
 
@@ -48,8 +49,13 @@
         background: #005963 !important;
     }
 
-    .all-doctor-container {
-        .single-doctor {
+    .all-specialty-container {
+
+        .btn-search {
+            float: right;
+        }
+
+        .single-specialty {
             width: 700px;
             border: 1px solid #e3e4e4;
             display: flex;
@@ -61,15 +67,15 @@
 
 
             .left {
-                width: 40%;
+                width: 50%;
                 overflow: hidden;
 
 
                 img {
-                    border-radius: 5px;
-
                     height: 100%;
-                    width: 100%;
+                    width: 97%;
+                    border-top-left-radius: 15px;
+                    border-bottom-left-radius: 15px;
                     background-position: center center;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -91,7 +97,7 @@
 
             .right {
                 padding: 30px;
-                width: 60%;
+                width: 50%;
 
                 h4 {
                     font-weight: 600;
@@ -102,8 +108,13 @@
 
                 div {
                     color: #005963;
-                    font-weight: 500;
-                    font-size: 14px;
+                    text-align: center;
+                    margin-bottom: 20px;
+
+                    h3 {
+                        font-weight: 600;
+
+                    }
                 }
 
                 p {
@@ -114,10 +125,6 @@
                     line-height: 1.8;
                     height: 75px;
                     overflow: hidden;
-                }
-
-                .location {
-                    margin-top: 5px;
                 }
 
                 .wrap-button {}
@@ -191,8 +198,8 @@
 }
 
 @media screen and (max-width:640px) {
-    .all-doctor-body {
-        .all-doctor-title {
+    .all-clinic-body {
+        .all-clinic-title {
             h2 {
                 font-size: 36px;
                 margin-top: 20px;
@@ -203,34 +210,7 @@
         }
 
         .all-doctor-container {
-            .content-doctor-wrap {
-                display: flex;
-                justify-content: center;
-
-                .single-doctor {
-                    width: 250px;
-                    flex-direction: column;
-                    margin-right: 20px;
-
-                    .left {
-                        width: 100%;
-                    }
-
-                    .right {
-                        width: 100%;
-
-                        .wrap-button {
-                            display: flex;
-
-                            button {
-                                font-size: 14px;
-                                padding: 10px 14px;
-                                margin-left: 16px;
-                            }
-                        }
-                    }
-                }
-            }
+            .single-doctor {}
         }
     }
 

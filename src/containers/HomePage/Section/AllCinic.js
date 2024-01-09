@@ -4,9 +4,9 @@ import { LANGUAGES } from '../../../utils';
 import { FormattedMessage } from 'react-intl';
 import HomeHeader from '../HomeHeader';
 import HomeFooter from '../HomeFooter';
-import "./AllSpecialty.scss";
+import "./AllClinic.scss";
 import * as actions from '../../../store/actions';
-import { getAllSpecialty } from '../../../services/userService';
+import { getAllClinic, getAllSpecialty } from '../../../services/userService';
 import { FaHeart } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import Typography from '@mui/material/Typography';
@@ -15,12 +15,12 @@ import { Link } from 'react-router-dom';
 
 
 
-class AllSpecialty extends Component {
+class AllClinic extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            arrSpecialty: [],
+            arrClinic: [],
             isHeart: false,
             currentPage: 1,
             postsPerPage: 2,
@@ -30,10 +30,10 @@ class AllSpecialty extends Component {
 
     async componentDidMount() {
         this.props.loadTopDoctors();
-        let res = await getAllSpecialty();
+        let res = await getAllClinic();
         if (res && res.errorCode === 0) {
             this.setState({
-                arrSpecialty: res.data
+                arrClinic: res.data
             })
         }
     }
@@ -64,13 +64,13 @@ class AllSpecialty extends Component {
 
     render() {
 
-        let { arrSpecialty, currentPage, postsPerPage } = this.state;
+        let { arrClinic, currentPage, postsPerPage } = this.state;
         let { language } = this.props;
         console.log("chek state", this.state);
 
         const indexOfLastPost = currentPage * postsPerPage;
         const indexOfFirstPost = indexOfLastPost - postsPerPage;
-        const currentPost = arrSpecialty.slice(indexOfFirstPost, indexOfLastPost);
+        const currentPost = arrClinic.slice(indexOfFirstPost, indexOfLastPost);
 
         const arrRender = currentPost.map((item, index) => {
             let imageBase64 = item.image;
@@ -86,7 +86,7 @@ class AllSpecialty extends Component {
                         </div>
                         <div className="right">
                             <h4></h4>
-                            {arrSpecialty && arrSpecialty.length > 0 && arrSpecialty.map((content, num) => {
+                            {arrClinic && arrClinic.length > 0 && arrClinic.map((content, num) => {
 
                                 if (item.id === content.id) {
 
@@ -118,7 +118,7 @@ class AllSpecialty extends Component {
         })
 
         const pageNumbers = [];
-        for (let i = 1; i <= Math.ceil(arrSpecialty.length / postsPerPage); i++) {
+        for (let i = 1; i <= Math.ceil(arrClinic.length / postsPerPage); i++) {
             pageNumbers.push(i);
         }
 
@@ -139,16 +139,18 @@ class AllSpecialty extends Component {
             <>
 
                 <HomeHeader />
-                <div className="all-specialty-body">
-                    <div className="all-specialty-title">
-                        <h2><FormattedMessage id="menu.admin.specialty" /></h2>
+                <div className="all-clinic-body">
+                    <div className="all-clinic-title">
+                        <h2>
+                            <FormattedMessage id="menu.admin.clinic" />
+                        </h2>
                         <Breadcrumbs aria-label="breadcrumb">
                             <Link to="/home">
                                 <FormattedMessage id="homeheader.home" />
                             </Link>
 
 
-                            <Typography color="text.primary"><FormattedMessage id="menu.admin.specialty" /></Typography>
+                            <Typography color="text.primary"><FormattedMessage id="menu.admin.clinic" /></Typography>
                         </Breadcrumbs>
                     </div>
                     <div className="all-specialty-container">
@@ -157,7 +159,7 @@ class AllSpecialty extends Component {
 
                             </div>
 
-                            <div className="col-lg-8 content-specialty-wrap">
+                            <div className="col-lg-8">
                                 <ul>
                                     {arrRender}
                                 </ul>
@@ -193,4 +195,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AllSpecialty);
+export default connect(mapStateToProps, mapDispatchToProps)(AllClinic);

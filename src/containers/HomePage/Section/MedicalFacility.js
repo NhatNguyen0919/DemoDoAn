@@ -43,7 +43,7 @@ class MedicalFacility extends Component {
                     <div className='clinic-wrapper section-medical'>
                         <div className='section-container'>
                             <div className="section-header">
-                                <h3>Cơ sở y tế nổi bật</h3>
+                                <h3><FormattedMessage id="menu.admin.clinic" /></h3>
                                 <button><FormattedMessage id="homepage.more-info" /></button>
                             </div>
 
@@ -60,7 +60,7 @@ class MedicalFacility extends Component {
                                                     />
                                                     <div className='custom-text'>
                                                         <h4>{item.name}</h4>
-                                                        <div className='readmore'>Readmore <i><FaArrowRightLong /></i> </div>
+                                                        <div className='readmore'><FormattedMessage id="homepage.more-info" /> <i><FaArrowRightLong /></i> </div>
                                                     </div>
                                                 </div>
                                             )

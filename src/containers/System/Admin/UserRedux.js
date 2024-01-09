@@ -3,13 +3,11 @@ import { FormattedMessage } from 'react-intl';
 import { AiOutlineUpload } from "react-icons/ai";
 import { connect } from 'react-redux';
 import "./UserRedux.scss";
-import { getAllCodeService } from '../../../services/userService';
 import { LANGUAGES, CRUD_ACTION, CommonUtils } from '../../../utils';
 import * as actions from '../../../store/actions';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import TableManageUser from './TableManageUser';
-import ManageDoctor from './ManageDoctor';
 
 
 
@@ -250,7 +248,7 @@ class UserRedux extends Component {
 
         let { email, password, firstName, lastName,
             phoneNumber, address,
-            gender, position, role, avatar } = this.state;
+            gender, position, role } = this.state;
 
 
         return (

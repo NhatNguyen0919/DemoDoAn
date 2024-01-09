@@ -111,3 +111,53 @@
         bottom: auto;
     }
 }
+
+@media screen and (max-width:640px) {
+    .doctor-detail-container {
+        .intro-doctor {
+            .content-left {
+                width: 5%;
+            }
+
+            .content-right {
+                padding-top: 200px;
+
+                .content-right-container {
+                    width: 100%;
+
+                    .up {
+                        font-size: 20px;
+                    }
+
+                    .down {
+                        span {
+                            font-size: 14px;
+                            line-height: 1.4;
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+
+        .schedule-doctor {
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+
+            .content-right {
+                .doctor-extra-container {
+                    padding: 0;
+
+                    .content-down {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+
+        .detail-infor-doctor {
+            padding: 20px 30px;
+        }
+    }
+}
