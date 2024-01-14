@@ -13,7 +13,8 @@
         "welcome": "Welcome",
         "contact": "Contact",
         "home": "Home",
-        "search": "Find a general check-up package"
+        "search": "Find a general check-up package",
+        "ourteam": "Meet our team"
     },
     "banner": {
         "title1": "MEDICAL PLATFORM",
@@ -44,7 +45,8 @@
         "we-do": "What We do",
         "our-services": "Our Services",
         "process": "Work Process",
-        "searchdoctor": "Search Best Online Professional",
+        "searchdoctor": "Search Doctor",
+        "searchspecialty": "Search Specialty",
         "reason-seacth": "Search and connect with top online professionals.",
         "appointments": "Get Instant Appointment",
         "reason-appointment": "Explore the convenience and flexibility, and begin your journey.",
@@ -167,7 +169,6 @@
     "footer": {
         "address": "Our Address",
         "detail-address": "Ho Chi Minh City",
-        "call":"Call us"
-
+        "call": "Call us"
     }
 }

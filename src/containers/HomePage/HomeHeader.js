@@ -138,10 +138,10 @@ class HomeHeader extends Component {
                                 <div className='title2'><FormattedMessage id="banner.title2" /></div>
                                 <div className='wrap-button'>
                                     <Link to="/Alldoctor" >
-                                        <button className='find-dr-btn'>Find doctor</button>
+                                        <button className='find-dr-btn'><FormattedMessage id="step.searchdoctor" /></button>
                                     </Link>
                                     <Link to="/Allspecialty">
-                                        <button className='find-specialty-btn'>Find specialty</button>
+                                        <button className='find-specialty-btn'><FormattedMessage id="step.searchspecialty" /></button>
                                     </Link>
                                 </div>
 

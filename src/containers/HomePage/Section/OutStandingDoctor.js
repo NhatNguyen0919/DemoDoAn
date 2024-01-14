@@ -83,7 +83,7 @@ class OutStandingDoctor extends Component {
                         <div className='opacity1'>
                             <div className="section-header1">
 
-                                <p>Meet our team</p>
+                                <p><FormattedMessage id="homeheader.ourteam" /></p>
                                 <h3><FormattedMessage id="homepage.out-standing-doctors" /></h3>
                             </div>
 
